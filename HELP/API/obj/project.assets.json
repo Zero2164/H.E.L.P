@@ -1576,11 +1576,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kylej\\Documents\\GitHub\\IdeaHub\\ATLAS\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Kylej\\Documents\\GitHub\\H.E.L.P\\HELP\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Kylej\\Documents\\GitHub\\IdeaHub\\ATLAS\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Kylej\\Documents\\GitHub\\H.E.L.P\\HELP\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Kylej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kylej\\Documents\\GitHub\\IdeaHub\\ATLAS\\API\\obj\\",
+      "outputPath": "C:\\Users\\Kylej\\Documents\\GitHub\\H.E.L.P\\HELP\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kylej\\AppData\\Roaming\\NuGet\\NuGet.Config"

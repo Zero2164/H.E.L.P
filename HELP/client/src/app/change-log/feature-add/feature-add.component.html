@@ -1,29 +1,30 @@
-<div class="bg-light pt-5 pageView2 text-center">
+<div class="bg-light pageView2 text-center">
     <div class="container">
-        <div class="row justify-content-center pt-5 mt-5">
+        <div class="row justify-content-center pt-5 mt-5 px-2">
             <form #featureForm="ngForm" (ngSubmit)="add()" autocomplete="off">
                 <h2 class="text-center text-primary font-weight-bold">New Upcoming Feature</h2>
-                <hr class="bg-secondary">
-                <div class="form-group">
+                <div class="form-group m-auto col-12 col-md-8">
+                    <hr class="bg-secondary">
                     <input name="Feature" [(ngModel)]="_textValue" (ngModelChange)="ConvertToLower($event)"
                         [(ngModel)]="feat.Feature" class="form-control mb-2 bg-light rounded" type="text"
                         placeholder="Feature Title" autocomplete="off" autofocus>
                     <input name="FeatureUrl" [(ngModel)]="feat.FeaturePhotoUrl"
-                        class="form-control mb-2 bg-light rounded" type="text" placeholder="Feature Photo Url (Optional)"
-                        autocomplete="off">
+                        class="form-control mb-2 bg-light rounded" type="text"
+                        placeholder="Feature Photo Url (Optional)" autocomplete="off">
                     <input [(ngModel)]="feat.FeatureDue" name="FeatureDue" type="text" placeholder="Release Date"
                         class="form-control mb-2 bg-light rounded theme-red" bsDatepicker
-                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-red', dateInputFormat: 'MMMM Do YYYY'}" [minDate]="minDate">
-                    <textarea name="FeatureDetails" [(ngModel)]="feat.FeatureDetails"
-                        class="form-control bg-light rounded ky-css-height2" rows="3"
-                        placeholder="Feature Description"></textarea>
+                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-red', dateInputFormat: 'MMMM Do YYYY'}"
+                        [minDate]="minDate">
+                    <angular-editor name="FeatureDetails" class="text-left" [config]="editorConfig"
+                        [placeholder]="'Enter feature details here...'" [(ngModel)]="feat.FeatureDetails">
+                    </angular-editor>
                 </div>
-                <button class="btn btn-primary btn-lg rounded" type="submit">Submit</button>
+                <button class="btn btn-primary btn-lg rounded mt-2" type="submit">Submit</button>
             </form>
         </div>
         <div class="container mt-4">
-            <div class="m-5">
-                <button class="btn btn-outline-dark btn-lg m-5 rounded-circle font-weight-bold" type="button"
+            <div class="m-2">
+                <button class="btn btn-outline-dark btn-lg rounded-circle font-weight-bold" type="button"
                     routerLink="/changes">
                     X
                 </button>

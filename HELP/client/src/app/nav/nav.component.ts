@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -6,19 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  services = false;
-
+  isCollapsed = true;
+  faBars = faBars;
+  shdwClass = "";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  serviceOff() {
-    this.services = false;
+  drpDownActive() {
+    this.isCollapsed = !this.isCollapsed;
+    if(!this.isCollapsed) {
+      this.shdwClass = "shdwClass";
+    } else if(this.isCollapsed) {
+      this.shdwClass = "";
+    }
   }
 
-  serviceClck() { 
-    this.services = true;
-  }
 }

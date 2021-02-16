@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Change } from '../_models/change';
+import { Feature } from '../_models/feature';
 import { NewChangeFeature } from '../_services/newChangeFeature.service';
 
 @Component({
@@ -8,29 +11,15 @@ import { NewChangeFeature } from '../_services/newChangeFeature.service';
   styleUrls: ['./change-log.component.css']
 })
 export class ChangeLogComponent implements OnInit {
-  changeModel: any;
-  featureModel: any;
+  changes$: Observable<Change[]>;
+  features$: Observable<Feature[]>;
 
   constructor(private http: HttpClient, private newChangeFeature: NewChangeFeature) { }
 
   ngOnInit() {
-    this.getChangz();
-    this. getFeatures();
+    this.changes$ = this.newChangeFeature.getChangz();
+    this.features$ = this.newChangeFeature.getFeatures();
   }
  
-  getChangz() {
-    this.http.get('https://localhost:5001/api/changes').subscribe(response => {
-      this.changeModel = response;
-    }, error => {
-      console.log(error);
-    })
-  }
 
-  getFeatures() {
-    this.http.get('https://localhost:5001/api/features').subscribe(response => {
-      this.featureModel = response;
-    }, error => {
-      console.log(error);
-    })
-  }
 }

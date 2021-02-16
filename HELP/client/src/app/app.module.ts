@@ -13,6 +13,10 @@ import { ChangeLogAddComponent } from './change-log/change-log-add/change-log-ad
 import { ChangeLogCardComponent } from './change-log/change-log-card/change-log-card.component';
 import { FeatureAddComponent } from './change-log/feature-add/feature-add.component';
 import { FeatureCardComponent } from './change-log/feature-card/feature-card.component';
+import { WebsitesComponent } from './websites/websites.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { FeatureCardComponent } from './change-log/feature-card/feature-card.com
     ChangeLogAddComponent,
     ChangeLogCardComponent,
     FeatureAddComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    WebsitesComponent,
+    ProjectsComponent,
+    AboutMeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,42 +1,26 @@
 <!-- Primary Navbar responsible for enabling secondary Navbar and providing search fucntionality within. -->
-<nav class="navbar navbar-expand navbar-light bg-light fixed-top">
-  <button class="navbar-brand btn btn-danger rounded-circle disabled p-2"><a href="#" class="text-decoration-none text-light"><span class="text-light p-1 font-weight-bold">IT</span></a></button>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" (click)="serviceOff()" href="#">Data<span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="serviceClck()" routerLink="services" routerLinkActive="active border-bottom border-dark">Services</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="serviceOff()" href="#">Logging</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="serviceOff()" routerLink="changes" routerLinkActive="active border-bottom border-dark">Changes</a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" [class]="shdwClass">
+  <a class="navbar-brand p-0 my-0 mx-2" routerLink="/" title="High-End, Early, Learning, Portfolio"><img
+      class="HELPLogo" src="../../assets/Images/HELPLogo.png" alt=""></a>
+  <button type="button" class="navbar-toggler" (click)="drpDownActive()" [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseBasic">
+    <fa-icon [icon]="faBars" class="2x"></fa-icon>
+  </button>
+  <div id="collapseBasic" class="collapse navbar-collapse text-center" [collapse]="isCollapsed" [isAnimated]="true">
+    <ul class="navbar-nav ml-md-auto my-4 my-md-auto">
+      <li class="nav-item mx-2">
+        <a class="nav-link" routerLink="about" routerLinkActive="active border-bottom border-dark">About</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" routerLink="projects" routerLinkActive="active border-bottom border-dark">Projects</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" routerLink="websites" routerLinkActive="active border-bottom border-dark">Websites</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" routerLink="changes" routerLinkActive="active border-bottom border-dark">Changes</a>
+      </li>
+    </ul>
+  </div>
+
 </nav>
-<ng-container *ngIf="services">
-  <!-- Secondary Navbar containing main Navbar menu options -->
-  <nav class="navbar navbar-expand navbar-dark bg-dark mt-5 pt-3">
-    <div class="container justify-content-center">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#">Priority Incidents</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#">Planned Outages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#">User Interactions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#">Priority Selector</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="services/sd-request-tool" routerLinkActive="active border-bottom">Request Tool</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</ng-container>

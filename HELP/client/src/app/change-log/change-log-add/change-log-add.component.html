@@ -1,10 +1,10 @@
-<div class="bg-light pt-5 pageView2 text-center">
+<div class="bg-light pageView2 text-center">
     <div class="container">
-        <div class="row justify-content-center pt-5 mt-5">
+        <div class="row justify-content-center pt-5 mt-5 px-2">
             <form #changeForm="ngForm" (ngSubmit)="add()" autocomplete="off">
                 <h2 class="text-center text-primary font-weight-bold">New Change</h2>
-                <hr class="bg-secondary">
-                <div class="form-group">
+                <div class="form-group m-auto col-12 col-md-8">
+                    <hr class="bg-secondary">
                     <input name="Change" [(ngModel)]="_textValue" (ngModelChange)="ConvertToLower($event)"
                         [(ngModel)]="chng.Change" class="form-control mb-2 bg-light rounded" type="text"
                         placeholder="Change Title" autocomplete="off" autofocus>
@@ -12,16 +12,16 @@
                         class="form-control mb-2 bg-light rounded theme-red" bsDatepicker
                         [bsConfig]="{ isAnimated: true, containerClass: 'theme-red', dateInputFormat: 'MMMM Do YYYY'}"
                         required>
-                    <textarea name="ChangeDetails" [(ngModel)]="chng.ChangeDetails"
-                        class="form-control bg-light rounded ky-css-height" rows="3"
-                        placeholder="Change Description"></textarea>
+                    <angular-editor name="ChangeDetails" class="text-left" [config]="editorConfig"
+                        [placeholder]="'Enter change details here...'" [(ngModel)]="chng.ChangeDetails">
+                    </angular-editor>
                 </div>
-                <button class="btn btn-primary btn-lg rounded" type="submit">Submit</button>
+                <button class="btn btn-primary btn-lg rounded mt-2" type="submit">Submit</button>
             </form>
         </div>
         <div class="container mt-4">
-            <div class="m-5">
-                <button class="btn btn-outline-dark btn-lg m-5 rounded-circle font-weight-bold" type="button"
+            <div class="m-2">
+                <button class="btn btn-outline-dark btn-lg rounded-circle font-weight-bold" type="button"
                     routerLink="/changes">
                     X
                 </button>

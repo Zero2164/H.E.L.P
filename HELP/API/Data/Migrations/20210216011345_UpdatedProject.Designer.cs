@@ -4,12 +4,13 @@ using HELP.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210130024324_CreatedAdded")]
-    partial class CreatedAdded
+    [Migration("20210216011345_UpdatedProject")]
+    partial class UpdatedProject
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,6 +43,12 @@ namespace API.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("KyFeatureDue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("KyFeaturePhotoUrl")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("KyNewFeature")
                         .HasColumnType("TEXT");

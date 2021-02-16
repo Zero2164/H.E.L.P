@@ -13,15 +13,36 @@ a:hover, a {
 }
 
 /* Invisible ScrollBar */
-body, html, .ky-css-logBox1:hover, .ky-css-text {
+body, html, .ky-css-logBox1, .ky-css-text, .pageView2 {
     -ms-overflow-style: none;  
     scrollbar-width: none; 
 }
 
-html::-webkit-scrollbar, .ky-css-logBox1:hover::-webkit-scrollbar, .ky-css-text::-webkit-scrollbar {
+html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webkit-scrollbar, .pageView2::-webkit-scrollbar {
     display: none;
 }
 
+/* Navbar CSS */
+.HELPLogo {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    margin: 0 2rem 0 0;
+    opacity: 1;
+}
+
+.navbar-brand {
+    border-right: 1px solid black;
+}
+
+.nav-link {
+    border-bottom: 1px solid transparent;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
 
 /* ChangeLog/Feature CSS */
 .bgSmoke {
@@ -31,15 +52,10 @@ html::-webkit-scrollbar, .ky-css-logBox1:hover::-webkit-scrollbar, .ky-css-text:
 .ky-css-logBox1, .ky-css-logBox2 {
     background-color: white;
     border-radius: 5px;
-    height: 40rem;
-    margin: 2rem;
+    height: 36rem;
+    margin: 1rem;
     margin-top: 0;
     overflow-y: hidden;
-}
-
-.ky-css-logBox1:hover {
-    opacity: 1;
-    transition: 0.3s;
 }
 
 .ky-css-List {
@@ -47,7 +63,7 @@ html::-webkit-scrollbar, .ky-css-logBox1:hover::-webkit-scrollbar, .ky-css-text:
 }
 
 .ky-css-cbox {
-    height: 40rem;
+    height: 36rem;
 }
 
 .ky-css-carBody {
@@ -68,20 +84,10 @@ html::-webkit-scrollbar, .ky-css-logBox1:hover::-webkit-scrollbar, .ky-css-text:
     overflow-y: auto;
 }
 
-.card.shdw, .ky-css-logBox1, .ky-css-logBox2 {
+.card.shdw, .ky-css-logBox1, .ky-css-logBox2, .shdwClass {
     -moz-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     -webkit-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
-}
-
-.ky-css-height {
-    max-height: 40vh;
-}
-.ky-css-height2 {
-    max-height: 35vh;
-}
-.ky-css-height2, .ky-css-height {
-    min-height: 15vh;
 }
 
 
@@ -91,7 +97,7 @@ html::-webkit-scrollbar, .ky-css-logBox1:hover::-webkit-scrollbar, .ky-css-text:
 }
 
 .pageView2 {
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 @media only screen and (min-width: 2000px) {
