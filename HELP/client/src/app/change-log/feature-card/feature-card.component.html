@@ -1,0 +1,12 @@
+<img class="ky-css-img" src="{{ feat.kyFeaturePhotoUrl }}" alt="">
+<div class="carousel-caption ky-css-carBody">
+    <div class="card shdw card-body text-dark bgSmoke mb-5 rounded">
+        <h5 class="card-title text-capitalize"> {{ feat.kyNewFeature }} </h5>
+        <p><em>{{ feat.kyFeatureDue | date: "longDate" }}</em></p>
+        <div class="ky-css-text border rounded p-lg-3">
+            <div class="card-text text-left">
+                <p>{{ feat.kyNewFeatureDetails }}</p>
+            </div>
+        </div>
+    </div>
+</div>

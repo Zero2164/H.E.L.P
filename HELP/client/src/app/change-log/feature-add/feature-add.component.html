@@ -1,0 +1,33 @@
+<div class="bg-light pt-5 pageView2 text-center">
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5">
+            <form #featureForm="ngForm" (ngSubmit)="add()" autocomplete="off">
+                <h2 class="text-center text-primary font-weight-bold">New Upcoming Feature</h2>
+                <hr class="bg-secondary">
+                <div class="form-group">
+                    <input name="Feature" [(ngModel)]="_textValue" (ngModelChange)="ConvertToLower($event)"
+                        [(ngModel)]="feat.Feature" class="form-control mb-2 bg-light rounded" type="text"
+                        placeholder="Feature Title" autocomplete="off" autofocus>
+                    <input name="FeatureUrl" [(ngModel)]="feat.FeaturePhotoUrl"
+                        class="form-control mb-2 bg-light rounded" type="text" placeholder="Feature Photo Url (Optional)"
+                        autocomplete="off">
+                    <input [(ngModel)]="feat.FeatureDue" name="FeatureDue" type="text" placeholder="Release Date"
+                        class="form-control mb-2 bg-light rounded theme-red" bsDatepicker
+                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-red', dateInputFormat: 'MMMM Do YYYY'}" [minDate]="minDate">
+                    <textarea name="FeatureDetails" [(ngModel)]="feat.FeatureDetails"
+                        class="form-control bg-light rounded ky-css-height2" rows="3"
+                        placeholder="Feature Description"></textarea>
+                </div>
+                <button class="btn btn-primary btn-lg rounded" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="container mt-4">
+            <div class="m-5">
+                <button class="btn btn-outline-dark btn-lg m-5 rounded-circle font-weight-bold" type="button"
+                    routerLink="/changes">
+                    X
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

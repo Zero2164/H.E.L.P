@@ -1,0 +1,12 @@
+<h5 class="text-capitalize text-dark"> {{ chng.kyNewChng }} </h5>
+<div class="card shdw col-12 bgSmoke">
+    <ng-container >
+        <p class="text-secondary pt-2 pl-2"><em> {{ chng.kyCreated | date: 'longDate'}}</em></p>
+        <hr class="p-0 m-0">
+    </ng-container>
+    <div class="card-body">
+        <p class="card-text p-0">
+            {{ chng.kyChngDetails }}
+        </p>
+    </div>
+</div>

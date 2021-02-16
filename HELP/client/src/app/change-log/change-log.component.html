@@ -1,0 +1,24 @@
+<div class="bg-dark col-12 pt-5 pageView">
+    <div class="row justify-content-center pt-5 ">
+        <div class="col-12 col-lg-5">
+            <h4 class="text-center p-4 m-2 text-light col-12 font-weight-bold">Changelog</h4>
+            <div class="ky-css-logBox1">
+                <ul class="text-left ky-css-List col-12">
+                    <li class="column p-3 border-bottom" *ngFor="let chng of changeModel">
+                        <app-change-log-card [chng]="chng"></app-change-log-card>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5">
+            <h4 class="text-center p-4 m-2 text-light col-12 font-weight-bold">Upcoming Features</h4>
+            <div class="ky-css-logBox2 bg-info">
+                <carousel [isAnimated]="true">
+                    <slide *ngFor="let feat of featureModel" class="ky-css-cbox">
+                        <app-feature-card [feat]="feat"></app-feature-card>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+</div>
