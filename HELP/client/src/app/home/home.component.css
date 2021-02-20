@@ -1,0 +1,148 @@
+/* CSS Home Page */
+
+.contHeight {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 15rem;
+    width: 18rem;
+    margin: auto;
+    border: 3px solid rgb(119, 119, 119);
+    position: absolute;
+    left: 37%;
+    bottom: 10px;
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.logo {
+    color: whitesmoke;
+    font-size: 7rem;
+    font-weight: 400;
+    font-family: 'Bree Serif', serif;
+    position: absolute;
+    left: 36%;
+    bottom: -20px;
+    transform: rotate(180deg);
+    animation-name: l0;
+    opacity: 0;
+    z-index: 999;
+}
+
+.logoFin {
+    display: none;
+    margin: auto;
+    width: 24rem;
+    height: 7rem;
+}
+
+
+/* Pill Preview on Home Page */
+.prev {
+    width: 100%;
+    height: 30rem;
+    border-radius: 100px;
+    background-color: rgba(56, 56, 56, 0.459);
+}
+
+.leftSide, .rightSide {
+    width: 50%;
+    height: 30rem;
+}
+
+.leftSide {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-image: url("https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1269&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rightSide {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+    height: 100%;
+    background-color: transparent;
+}
+
+.pro, .web {
+    cursor: pointer;
+    height: 110%;
+    padding: 2rem;
+    margin-top: 0;
+    color: rgb(49, 49, 49);
+    background-color: whitesmoke;
+}
+
+.pro:hover, .web:hover {
+    background-color: rgb(95, 205, 248);
+    color: white;
+
+}
+
+.contHeight2 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo-text color and font */
+
+#l2, #l4 {
+    color: rgb(95, 205, 248);
+}
+
+#l1, #l3 {
+    color: rgb(49, 49, 49);
+}
+
+/* Animation settings */
+
+.logo, .box {
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Logo-background animation names */
+
+#b0 {
+    animation-name: a0;
+}
+
+#b1 {
+    animation-name: a1;
+}
+
+/* keyframes for each element */
+
+@keyframes l0 {
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes a0 {
+    100% {
+        transform: rotate(170deg);
+        height: 4.5rem;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes a1 {
+    100% {
+        transform: rotate(190deg);
+        height: 4.5rem;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+}

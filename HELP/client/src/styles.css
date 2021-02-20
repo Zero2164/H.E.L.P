@@ -13,6 +13,8 @@ a:hover, a {
     outline: none;
 }
 
+/* Commonly used Section--------------------------------------------- */
+
 /* Invisible ScrollBar */
 
 body, html, .ky-css-logBox1, .ky-css-text, .pageView2 {
@@ -24,172 +26,18 @@ html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webk
     display: none;
 }
 
-/* Navbar CSS */
-
-.HELPLogo {
-    width: 100px;
-    height: 40px;
-    padding: 0;
-    margin: 0 2rem 0 0;
-    opacity: 1;
-}
-
-.navbar-brand {
-    border-right: 1px solid black;
-}
-
-.nav-link {
-    border-bottom: 1px solid transparent;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    border-bottom: 1px solid black;
-}
-
-/* ChangeLog/Feature CSS */
-
-.bgSmoke {
-    background-color: whitesmoke;
-}
-
-.ky-css-logBox1, .ky-css-logBox2 {
-    background-color: white;
-    border-radius: 5px;
-    height: 36rem;
-    margin: 1rem;
-    margin-top: 0;
-    overflow-y: hidden;
-}
-
-.ky-css-List {
-    list-style: none;
-}
-
-.ky-css-cbox {
-    height: 36rem;
-}
-
-.ky-css-carBody {
-    margin-bottom: 6rem;
-}
-
-.ky-css-img {
-    opacity: 0.5;
-    width: 100%;
-    height: 100vh;
-}
-
-.ky-css-text {
-    height: 8rem;
-}
-
-.ky-css-logBox1:hover, .ky-css-text {
-    overflow-y: auto;
-}
-
-.card.shdw, .ky-css-logBox1, .ky-css-logBox2, .shdwClass {
+/* Create box shadow */
+.card.shdw, .ky-css-logBox1, .ky-css-logBox2, .shdwClass, .prev {
     -moz-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     -webkit-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
 }
 
-/* CSS Logo Animation */
-
-.contHeight {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Change Background  */
+.bgSmoke {
+    background-color: whitesmoke;
 }
 
-.box {
-    height: 15rem;
-    width: 18rem;
-    margin: auto;
-    border: 3px solid rgb(119, 119, 119);
-    position: absolute;
-    left: 37%;
-    bottom: 10px;
-    opacity: 0;
-    transform: rotate(0deg);
-}
-
-.logo {
-    color: whitesmoke;
-    font-size: 7rem;
-    font-weight: 400;
-    font-family: 'Bree Serif', serif;
-    position: absolute;
-    left: 36%;
-    bottom: -20px;
-    transform: rotate(180deg);
-    animation-name: l0;
-    opacity: 0;
-    z-index: 999;
-}
-
-.logoFin {
-    display: none;
-    margin: auto;
-    width: 24rem;
-    height: 7rem;
-}
-
-/* Logo-text color and font */
-
-#l2, #l4 {
-    color: rgb(95, 205, 248);
-}
-
-#l1, #l3 {
-    color: rgb(49, 49, 49);
-}
-
-/* Animation settings */
-
-.logo, .box {
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-/* Logo-background animation names */
-
-#b0 {
-    animation-name: a0;
-}
-
-#b1 {
-    animation-name: a1;
-}
-
-/* keyframes for each element */
-
-@keyframes l0 {
-    100% {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-}
-
-@keyframes a0 {
-    100% {
-        transform: rotate(170deg);
-        height: 4.5rem;
-        border-radius: 50%;
-        opacity: 0.5;
-    }
-}
-
-@keyframes a1 {
-    100% {
-        transform: rotate(190deg);
-        height: 4.5rem;
-        border-radius: 50%;
-        opacity: 0.5;
-    }
-}
 
 /* Creates view height background color */
 
@@ -199,6 +47,10 @@ html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webk
 
 .pageView2 {
     overflow-y: auto;
+}
+
+.pageView3 {
+    height: 40vh;
 }
 
 @media only screen and (min-width: 2000px) {

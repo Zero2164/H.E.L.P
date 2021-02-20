@@ -1,2 +1,2 @@
 # H.E.L.P
-High-End. Early. Learning. Portfolio
+High-End. Extensive. Learning. Portfolio

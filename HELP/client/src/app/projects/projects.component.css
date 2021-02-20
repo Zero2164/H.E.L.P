@@ -1,0 +1,29 @@
+.appPrev, .appImg {
+    border-radius: 25px;
+}
+
+.appImg {
+    width: 20rem;
+    height: 20rem;
+    background-image: url("../../assets/Images/skApp.PNG");
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+.appPrev {
+    width: 20rem;
+    height: 20rem;
+}
+
+.appImg:hover {
+    opacity: 1;
+    transition: 0.5s;
+    
+}
+
+.appImg:hover > .appText {
+    display: none;
+    transition: 0.5s;
+}

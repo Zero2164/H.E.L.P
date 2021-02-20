@@ -1,24 +1,23 @@
 <!-- Primary Navbar responsible for enabling secondary Navbar and providing search fucntionality within. -->
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" [class]="shdwClass">
-  <a class="navbar-brand p-0 my-0 mx-2" routerLink="/" title="High-End, Early, Learning, Portfolio"><img
-      class="HELPLogo" src="../../assets/Images/HELPLogo.png" alt=""></a>
-  <button type="button" class="navbar-toggler" (click)="drpDownActive()" [attr.aria-expanded]="!isCollapsed"
+  <a class="navbar-brand p-0 my-0 mx-2" (click)="drpDownInactive()" routerLink="/" title="H.E.L.P Home Page"><fa-icon [icon]="faHandsHelping" class="fontSizeUp homeMnu px-2"></fa-icon></a>
+  <button type="button" class="navbar-toggler collapseMnu" [class]="collapseMnuHvr" (click)="drpDownActive()" [attr.aria-expanded]="!isCollapsed"
     aria-controls="collapseBasic">
-    <fa-icon [icon]="faBars" class="2x"></fa-icon>
+    <fa-icon [icon]="faBars" class="fontSizeUp2"></fa-icon>
   </button>
   <div id="collapseBasic" class="collapse navbar-collapse text-center" [collapse]="isCollapsed" [isAnimated]="true">
     <ul class="navbar-nav ml-md-auto my-4 my-md-auto">
       <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="about" routerLinkActive="active border-bottom border-dark">About</a>
+        <a class="nav-link" routerLink="about" (click)="drpDownInactive()" routerLinkActive="active border-bottom border-dark">About</a>
       </li>
       <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="projects" routerLinkActive="active border-bottom border-dark">Projects</a>
+        <a class="nav-link" routerLink="projects" (click)="drpDownInactive()" routerLinkActive="active border-bottom border-dark">Projects</a>
       </li>
       <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="websites" routerLinkActive="active border-bottom border-dark">Websites</a>
+        <a class="nav-link" routerLink="websites" (click)="drpDownInactive()" routerLinkActive="active border-bottom border-dark">Websites</a>
       </li>
       <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="changes" routerLinkActive="active border-bottom border-dark">Changes</a>
+        <a class="nav-link" routerLink="changes" (click)="drpDownInactive()" routerLinkActive="active border-bottom border-dark">Changes</a>
       </li>
     </ul>
   </div>

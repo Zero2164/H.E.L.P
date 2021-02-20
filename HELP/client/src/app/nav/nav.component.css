@@ -1,0 +1,58 @@
+/* Navbar CSS */
+
+.HELPLogo {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    margin: 0 2rem 0 0;
+    opacity: 1;
+}
+
+.navbar-brand {
+    border-right: 1px solid black;
+}
+
+.nav-link {
+    border-bottom: 1px solid transparent;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.homeMnu {
+    transition: 0.3s;
+    margin-right: 0.5rem;
+}
+
+.homeMnu:hover {
+    color: rgb(95, 205, 248);
+    transition: 0.3s;
+    margin-right: 2rem;
+}
+
+.fontSizeUp {
+    font-size: 2rem;
+}
+.fontSizeUp2 {
+    font-size: 1.4rem;
+}
+
+.collapseMnu {
+    transition: 0.3s;
+    outline: transparent;
+    border: transparent;
+}
+
+.collapseMnu:hover, .collapseMnuHvr {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.collapseMnuHvr {
+    transform: rotate(90deg);
+}
+
+
+
+

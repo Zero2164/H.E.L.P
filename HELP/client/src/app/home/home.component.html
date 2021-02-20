@@ -1,9 +1,9 @@
 <div class="bg-light pt-5 mt-5 pageView2 text-center">
-    <div class="col-5 col-sm-auto pt-5 pt-sm-auto">
-        <div class="container contHeight">
+    <div class="pt-5 pt-sm-auto col-4 col-sm-auto">
+        <div class="container contHeight pr-sm-5 ml-sm-2 ml-md-auto">
             <div class="col-12">
                 <div class="box" id="b0"></div>
-                <div class="logo">
+                <div class="logo" title="High-end, Extensive, Learning, Portfolio">
                     <span id="l1">H.</span>
                     <span id="l2">E.</span>
                     <span id="l3">L.</span>
@@ -15,13 +15,50 @@
     </div>
     <div class="container">
         <div class="column">
-            <header>Welcome to Kyle's High-end, Early, Learning, Portfolio (H.E.L.P)</header>
-            <p class="p-2"></p>
+            <header>
+                <h4>Welcome to Kyle's <br> High-end, Extensive, Learning, Portfolio (H.E.L.P)</h4>
+            </header>
+            <button class="btn btn-lg btn-outline-primary m-2" routerLink="about">Learn more</button>
         </div>
     </div>
 </div>
-<div class="bg-dark pt-5 pageView2 text-center">
+<div class="bg-dark pt-5 pageView text-center d-flex justify-content-center align-items-center">
+    <div class="container text-light mb-5 pb-5">
+        <div class="m-5">
+            <h4>Developing Journey, and Code Alongs I have experienced.</h4>
+        </div>
+        <div class="prev row m-auto">
+            <div class="leftSide"></div>
+            <div class="rightSide column p-0 m-0" >
+                <div class="col-12 contHeight2 pro" routerLink="projects">
+                    <h4 class="font-weight-bold">
+                        View Projects
+                    </h4>
+                    <fa-icon [icon]="faArrowRight" class="fontSizeUp ml-4 pb-2"></fa-icon>
+                </div>
+                <hr class="p-0 m-0 bg-light">
+                <div class="col-12 contHeight2 web" routerLink="websites">
+                    <h4 class="font-weight-bold ">
+                        View Full Stack Websites
+                    </h4>
+                    <fa-icon [icon]="faArrowRight" class="fontSizeUp ml-4 pb-2"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light pt-5 pageView3 text-center">
     <div class="container">
-
+        <div class="column m-5 m-auto">
+            <h4 class="px-2">Get in touch.</h4>
+            <div class="row mt-5 col-12 d-flex justify-content-center align-items-center">
+                <a href="https://www.linkedin.com/in/kyle-lamont-a72326152"><fa-icon [icon]="faLinkedin" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon></a>
+                <a href="https://github.com/Zero2164/Zero2164"><fa-icon [icon]="faGithub" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon></a>
+                <a (click)="shwEmail()"><fa-icon [icon]="faEnvelope" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon></a>
+                <div class="col-12 bg-dark text-center text-light p-4 mb-2" *ngIf="emailShw">
+                    <h4>kylejlamont@hotmail.com</h4>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

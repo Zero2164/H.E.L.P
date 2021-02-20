@@ -39,7 +39,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [],

@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 @NgModule({
   declarations: [],
@@ -14,6 +15,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     CommonModule,
     FontAwesomeModule,
     AngularEditorModule,
+    NgxScrollTopModule,
     BsDatepickerModule.forRoot(),
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
@@ -30,6 +32,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     CarouselModule,
     FontAwesomeModule,
     AngularEditorModule,
+    NgxScrollTopModule,
     ToastrModule
   ]
 })
