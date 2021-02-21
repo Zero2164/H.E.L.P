@@ -40,7 +40,6 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     SharedModule,
     HttpClientModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

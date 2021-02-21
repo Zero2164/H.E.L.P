@@ -33,13 +33,9 @@
     z-index: 999;
 }
 
-.logoFin {
-    display: none;
-    margin: auto;
-    width: 24rem;
-    height: 7rem;
+.logoFinImg {
+    transition: 0.3s;
 }
-
 
 /* Pill Preview on Home Page */
 .prev {
