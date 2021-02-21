@@ -1,15 +1,26 @@
 .appPrev, .appImg {
     border-radius: 25px;
+    padding: 0;
+    margin: auto;
 }
 
-.appImg {
-    width: 20rem;
+.skAppImg, .tdAppImg {
+    width: 100%;
     height: 20rem;
-    background-image: url("../../assets/Images/skApp.PNG");
     background-position: center;
     background-size: cover;
-    transition: 0.2s;
+    transition: 0.3s;
     opacity: 0.7;
+    border-radius: 25px;
+    color: whitesmoke;
+}
+
+.skAppImg {
+    background-image: url("../../assets/Images/skApp.PNG");
+}
+
+.tdAppImg {
+    background-image: url("../../assets/Images/tdApp.PNG");
 }
 
 .appPrev {
@@ -17,13 +28,19 @@
     height: 20rem;
 }
 
-.appImg:hover {
+.appText {
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
     opacity: 1;
-    transition: 0.5s;
-    
 }
 
-.appImg:hover > .appText {
-    display: none;
-    transition: 0.5s;
+.skAppImg:hover, .tdAppImg:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.skAppImg:hover > .appText, .tdAppImg:hover > .appText {
+    opacity: 0;
+    transition: 0.3s;
 }
