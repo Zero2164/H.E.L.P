@@ -31,6 +31,10 @@
     background-image: url("../../assets/Images/cl-nf.PNG");
 }
 
+.canvasGameImg {
+    background-image: url("../../assets/Images/canvasGameApp.PNG");
+}
+
 .appText {
     font-weight: bold;
     color: whitesmoke;

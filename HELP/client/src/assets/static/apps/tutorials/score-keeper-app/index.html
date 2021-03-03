@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tut: Score Keeper App</title>
+    <link rel="icon" type="image/x-icon" href="../../../../Images/HELPIcon.ico">
+    <!-- Bootstrap 4 Plugin -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- My CSS File -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Font Awesome CSS File -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts CSS File -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <!-- jQuery script file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="dark">
+    <div class="skapp">
+        <div id="mainPage">
+            <div class="title">
+                <i class="fas fa-cog settingz navIco"></i>
+                <div id="myContainer" class="d-flex justify-content-start"><button class="larry delila actvBtn"
+                        id="startGame">Begin!</button>
+                </div>
+            </div>
+            <div id="menNav" class="menuBar">
+
+                <div class="tooltipz"><span class="tooltiptextz">Reset Scores?</span><button
+                        class="menAppBtnSreset actvBtn" id="reset"><i class="fas fa-sort-numeric-up"></i></button></div>
+                <div class="tooltipz"><span class="tooltiptextz">Reset Game?</span><button
+                        class="menAppBtnGreset actvBtn" id="gameReset"><i class="fas fa-undo"></i></button></div>
+
+                <button class="exitAppBtn" title="Quit"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+            <div class="container d-flex justify-content-center">
+                <h1 class="bigJeff"><i class="fas fa-trophy"></i><br><span id="skAppMainTitle">SCORE KEEPER</span></h1>
+            </div>
+            <div id="SKapp" class="marge">
+                <div class="container d-flex justify-content-center thinFin">
+                    <h1 id="goalWord" class="olHarry">Playing to:
+                        <strong class=" olHarryGitty" id="goal"></strong>
+                        <i id="goalImg" class="far fa-question-circle overlay"></i>
+                    </h1>
+                </div>
+                <br>
+                <div class="container d-flex justify-content-center thinFin">
+                    <h1 id="roundWord" class="olHarry">Round:
+                        <strong class="olHarryGitty" id="round"></strong>
+                        <i id="roundImg" class="far fa-question-circle overlay"></i>
+                    </h1>
+                </div>
+                <br>
+                <div class="container d-flex justify-content-center">
+                    <div class="jannette" id="pOne">
+                        <p id="pOneNameStyle" class="norbert olHarryGitty">
+                            <strong id="pOneName">Player One</strong> :
+                            <i id="pName1Img" class="far fa-question-circle overlay"></i>
+                        </p>
+                        <span class="d-flex justify-content-center">
+                            <button id="p1Min" class="gerald activeMin actvBtn"><i
+                                    class="far fa-minus-square"></i></button>
+                            <p><strong id="p1ScoreNum" class="sally"> 0 </strong></p>
+                            <button id="p1Plus" class="gerald activePlus actvBtn"><i
+                                    class="far fa-plus-square"></i></button>
+                        </span>
+                        <span class="d-flex justify-content-center">
+                            <form id="form" class="patricia jannette paddy" onsubmit="return false;">
+                                <input id="incra1" class="delores" type="number" placeholder="#" />
+                            </form>
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="container d-flex justify-content-center">
+                    <div class="jannette" id="pTwo">
+                        <p id="pTwoNameStyle" class="norbert olHarryGitty">
+                            <strong id="pTwoName">Player Two</strong> :
+                            <i id="pName2Img" class="far fa-question-circle overlay"></i>
+                        </p>
+                        <span class="d-flex justify-content-center">
+                            <button id="p2Min" class="gerald activeMin actvBtn"><i
+                                    class="far fa-minus-square"></i></button>
+                            <p><strong id="p2ScoreNum" class="sally"> 0 </strong></p>
+                            <button id="p2Plus" class="gerald activePlus actvBtn"><i
+                                    class="far fa-plus-square"></i></button>
+                        </span>
+                        <span class="d-flex justify-content-center">
+                            <form id="form" class="patricia jannette paddy" onsubmit="return false;">
+                                <input id="incra2" class="delores" type="number" placeholder="#" />
+                            </form>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

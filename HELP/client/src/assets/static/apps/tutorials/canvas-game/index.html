@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tut: Canvas Game</title>
+    <link rel="icon" type="image/x-icon" href="../../../../Images/HELPIcon.ico">
+    <!-- Main CSS file-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- MagicMouse CSS lib file-->
+    <link href="./assets/css/lib/magic-mouse.css" rel="stylesheet" />
+    <!-- Google Fonts lib link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- "Container" to cover entire width/height of screen and position guiScreen element -->
+    <div class="container">
+        <!-- "guiScreen" to contain "totalScoreEL", "totalScoreText", and "startGameBtn" in nice gui display-->
+        <div class="guiScreen">
+            <!-- "totalScoreEl" to be altered by "Main JS file" based on points accumulated at the end game. InnerHtml is altered to change the value. -->
+            <h1 id="totalScoreEl">0</h1>
+            <!-- "totalScoreText" to inform end-user of which gui screen they are on -->
+            <p class="totalScoreText">Total Score</p>
+            <div>
+                <!-- Buttons to swap depending on game state. Each button calls the init function in the "Main Js" file -> used to start a new game. -->
+                <button class="startGameBtn magic-hover magic-hover__square">Start Game</button>
+                <button class="restartGameBtn magic-hover magic-hover__square">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    <!-- "scoreOverlay" to contain the "scoreEl" element and position in top-left corner of the screen.  -->
+    <div class="scoreOverlay">    <!-- "scoreEl" element that is manipulated based on the points accumalated during the game. InnerHtml is altered to change the value. -->
+        <span>Score: </span><span id="scoreEl">0</span>
+    </div>
+    <canvas></canvas>
+
+    <!-- JS script tags-->
+    <!-- MagicMouse JS lib file -->
+    <script src="./assets/js/lib/magic_mouse.js"></script>
+    <!-- Gsap JS lib cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <!-- Main JS file-->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
