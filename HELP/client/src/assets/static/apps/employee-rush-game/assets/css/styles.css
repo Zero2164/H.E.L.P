@@ -20,7 +20,7 @@ body {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 400px;
-    border: 2px solid whitesmoke;
+    border: none;
     border-radius: 5px;
     background-color: whitesmoke;
 

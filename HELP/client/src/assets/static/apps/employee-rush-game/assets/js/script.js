@@ -13,8 +13,8 @@ let
     frame = 0, //will keep track of frame count of animation loop
     score = 0, //score will increase everytime an obstacle is avoided
     gameSpeed = 2; //gamespeed to ensure all elements are moving at the same speed
-
 // let temp = canvas.height - 90; -> temporary variable to show jumping
+
 
 // animate function to start animations
 function animate() {

@@ -2,9 +2,9 @@ const obstaclesArr = [];
 
 class Obstacle { 
     constructor() {
-        this.bottom = (Math.random() * canvas.height/3) + 20;
+        this.bottom = 78;
         this.x = canvas.width;
-        this.width = 20;
+        this.width = canvas.width;
         this.color = 'black';
     }
 
@@ -17,6 +17,7 @@ class Obstacle {
         this.draw();
     }
 };
+
 
 function handleObstacles() {
     if(frame%50 === 0) {

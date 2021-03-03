@@ -1,3 +1,4 @@
+
 class Player {
     constructor() {
         this.x = 80;
