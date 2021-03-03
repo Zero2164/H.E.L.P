@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     overflow: hidden;
     cursor: none;
-    background: rgb(64, 68, 75);
+    background-color: #006e99;
     font-family: 'Russo One', sans-serif;
     -webkit-user-select: none;
     /* Safari */

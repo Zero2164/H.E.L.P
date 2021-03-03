@@ -1,5 +1,5 @@
 // create a function to contain 'ytCanvasGame' code.
-function ytCanvasGame() {
+function brutalPoint() {
     const 
         // select related HTML document elements.
         canvas = document.querySelector('canvas'), 
@@ -309,6 +309,6 @@ function ytCanvasGame() {
     });
 };
 // call the ytCanvasGame() to initialise the code stored within the browser window.
-ytCanvasGame();
+brutalPoint();
 
 
