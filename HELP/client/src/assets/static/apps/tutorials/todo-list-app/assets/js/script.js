@@ -207,7 +207,7 @@ function TODOApp() {
         $('.exitAppBtn').on('click', function () {
             var yes = confirm('Close TO-DO App?');
             if (yes) {
-                window.location.href = 'http://localhost:4200/projects';
+                window.location.href = 'https://localhost:4200/projects';
             } else {
                 return false;
             };
