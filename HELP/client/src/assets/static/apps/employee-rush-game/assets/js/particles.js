@@ -4,8 +4,8 @@ class Particle {
     constructor() {
         this.x = player.x;
         this.y = player.y;
-        this.size = Math.random() * 7 + 3;
-        this.speedY = (Math.random() * 1) - 0.5;
+        this.size = Math.random() * 3;
+        this.speedY = (Math.random() * 1) - 0.6;
         this.color = 'rgba(180, 180, 180, 0.363)';
     }
 

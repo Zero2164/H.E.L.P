@@ -1,8 +1,7 @@
-
 class Player {
     constructor() {
         this.x = 80;
-        this.y = 220;
+        this.y = 300;
         this.vy = 0;
         this.width = 20;
         this.height = 40;
@@ -29,7 +28,7 @@ class Player {
         if(spacePressed && this.vy <= 0) this.jump();
     }
     jump() {
-        this.vy -= 3;
+        this.vy -= 4;
     }
 };
 
