@@ -3,15 +3,15 @@ const customerArr = [];
 
 class Desk { 
     constructor() {
-        this.obj = 115;
+        this.obj1 = 140;
         this.x = canvas.width;
-        this.width = 50;
-        this.color = 'black';
+        this.width = 40;
+        this.color = 'grey';
     }
 
     draw() {
         c.fillStyle = this.color;
-        c.fillRect(this.x, canvas.height - this.obj, this.width, this.obj);
+        c.fillRect(this.x, canvas.height - this.obj1, this.width, this.obj1);
     }
     update() {
         this.x -= gameSpeed;
@@ -21,15 +21,16 @@ class Desk {
 
 class Customer { 
     constructor() {
-        this.obj = 125;
+        this.obj2 = 40;
         this.x = canvas.width;
+        this.y = player.vy + 260;
         this.width = 20;
         this.color = 'blue';
     }
 
     draw() {
         c.fillStyle = this.color;
-        c.fillRect(this.x, canvas.height - this.obj, this.width, this.obj);
+        c.fillRect(this.x, this.y, this.width, this.obj2);
     }
     update() {
         this.x -= gameSpeed;
@@ -39,7 +40,7 @@ class Customer {
 
 
 function handleObstacles() {
-    if(frame%150 === 0) {
+    if(frame%160 === 0) {
         desksArr.unshift(new Desk);
     };
     for (let i = 0; i < desksArr.length; i++) {
@@ -48,7 +49,7 @@ function handleObstacles() {
     if(desksArr.length > 20) {
         desksArr.pop(desksArr[0]);
     };
-    if(frame%120 === 0) {
+    if(frame%300 === 0) {
         customerArr.unshift(new Customer);
     };
     for (let i = 0; i < customerArr.length; i++) {
@@ -57,6 +58,5 @@ function handleObstacles() {
     if(customerArr.length > 20) {
         customerArr.pop(customerArr[0]);
     };
-
 
 };

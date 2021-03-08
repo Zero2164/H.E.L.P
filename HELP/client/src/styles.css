@@ -14,6 +14,12 @@ a:hover, a {
 }
 
 /* Commonly used Section--------------------------------------------- */
+/* textFont */
+.textLift {
+    font-weight: 600;
+}
+
+
 
 /* Invisible ScrollBar */
 
@@ -51,6 +57,11 @@ html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webk
 
 .pageView3 {
     height: 40vh;
+}
+
+.pageView4 {
+    height: 90vh;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 2000px) {

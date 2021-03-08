@@ -15,7 +15,7 @@ body, html {
     /* Standard */
 }
 
-div.scoreOverlay {
+.scoreOverlay {
     opacity: 0;
     position: fixed;
     font-weight: bold;

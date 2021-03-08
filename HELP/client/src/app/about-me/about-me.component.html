@@ -1,6 +1,6 @@
 <div class="bg-light pageView2 text-center text-dark">
     <div class="container ">
-        <div class="column pt-5 mt-5 px-3">
+        <div class="column pt-5 mt-5 px-3 textLift">
             <div class="container p-4">
                 <img class="aboutImg img-thumbnail bg-dark"
                     src="https://avatars.githubusercontent.com/u/61925456?s=460&u=d8155120296009bc68d87e33edad41c35460a57e&v=4"
@@ -45,17 +45,11 @@
                 </div>
                 <hr class="col-12 d-lg-none px-0 mx-0">
                 <div class="col-12 col-xl-4 p-3 mb-5 mb-lg-auto">
-                    <h4>Get in touch with Kyle.</h4>
-                    <div class="row mt-3 col-12 d-flex justify-content-center align-items-center">
-                        <a href="https://www.linkedin.com/in/kyle-lamont-a72326152">
-                            <fa-icon [icon]="faLinkedin" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon>
-                        </a>
-                        <a href="https://github.com/Zero2164/Zero2164">
-                            <fa-icon [icon]="faGithub" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon>
-                        </a>
-                        <a (click)="shwEmail()">
-                            <fa-icon [icon]="faEnvelope" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon>
-                        </a>
+                    <div class="row mt-0 d-flex justify-content-center">
+                        <h4 class="col-12 mb-3 pb-3">Get in touch</h4>
+                        <a href="https://www.linkedin.com/in/kyle-lamont-a72326152"><fa-icon [icon]="faLinkedin" class="fontSizeUp btn btn-light btn-lg rounded m-4"></fa-icon></a>
+                        <a href="https://github.com/Zero2164/Zero2164"><fa-icon [icon]="faGithub" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon></a>
+                        <a (click)="shwEmail()"><fa-icon [icon]="faEnvelope" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon></a>
                         <div class="col-12 bg-dark text-center text-light p-4 mb-2" *ngIf="emailShw">
                             <h4>kylejlamont@hotmail.com</h4>
                         </div>
@@ -66,20 +60,31 @@
             <div class="row mt-5 mb-5">
                 <div class="col-12 col-xl-4 p-3">
                     <h4 class="pb-3">Whats technologies am I using?</h4>
+                    <ul class="list-group list-group-flush text-left">
+                        <li class="list-group-item bg-transparent">
+                            <strong>FrontEnd:</strong>
+                            <br>
+                            Angular, HTML5, CSS3, NGX-Bootstrap4, NGX-FontAwesome, Google Fonts
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <strong>Backend:</strong>
+                            <br>
+                            Node.js, Dotnet5
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <strong>Database:</strong>
+                            <br>
+                            SQLLite
+                        </li>
+                    </ul>
                     <p class="text-left">
-                        <strong>FrontEnd:</strong>
-                        <br>
-                        Angular, HTML5, CSS3, NGX-Bootstrap4, NGX-FontAwesome, Google Fonts
+
                     </p>
                     <p class="text-left">
-                        <strong>Backend:</strong>
-                        <br>
-                        Node.js, Dotnet5
+
                     </p>
                     <p class="text-left">
-                        <strong>Database:</strong>
-                        <br>
-                        SQLLite
+
                     </p>
                 </div>
                 <hr class="col-12 d-lg-none px-0 mx-0">

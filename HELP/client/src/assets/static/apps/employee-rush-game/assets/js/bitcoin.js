@@ -4,13 +4,14 @@ class Bitcoin {
     constructor() {
         this.obj = 30;
         this.x = canvas.width;
+        this.y = canvas.height - 220
         this.width = 20;
         this.color = 'gold';
     }
 
     draw() {
         c.fillStyle = this.color;
-        c.fillRect(this.x, canvas.height - 220, this.width, this.obj);
+        c.fillRect(this.x, this.y, this.width, this.obj);
     }
     update() {
         this.x -= gameSpeed;

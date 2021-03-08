@@ -20,7 +20,7 @@ export class NewChangeFeature {
     return this.http.get<Change[]>(this.baseUrl + 'Changes').pipe(
       map(changes => {
         this.changes = changes;
-        return changes;
+        return changes.reverse();
       })
     );
   }
