@@ -11,14 +11,11 @@ export class AboutMeComponent implements OnInit {
   faLinkedin = faLinkedin ;
   faGithub = faGithub;
   faEnvelope = faEnvelope;
-  emailShw = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  shwEmail() {
-    this.emailShw = !this.emailShw;
-  }
+
 }

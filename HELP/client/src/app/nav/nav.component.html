@@ -8,6 +8,9 @@
   <div id="collapseBasic" class="collapse navbar-collapse text-center" [collapse]="isCollapsed" [isAnimated]="true">
     <ul class="navbar-nav ml-md-auto my-4 my-md-auto">
       <li class="nav-item mx-2">
+        <a class="nav-link" (click)="drpDownInactive()">Contact</a>
+      </li>
+      <li class="nav-item mx-2">
         <a class="nav-link" routerLink="about" (click)="drpDownInactive()" routerLinkActive="active border-bottom border-dark">About</a>
       </li>
       <li class="nav-item mx-2">

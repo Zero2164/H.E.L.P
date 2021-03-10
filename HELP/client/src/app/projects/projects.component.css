@@ -59,7 +59,7 @@
 }
 
 .appTextBg2 {
-    background-color: rgb(15, 27, 37);
+    background-color: rgb(43, 78, 107);
 }
 
 .hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover > .appText {
@@ -69,7 +69,7 @@
 }
 
 .bgAppBlue {
-    background-color: #006e99;
+    background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
 }
 
 

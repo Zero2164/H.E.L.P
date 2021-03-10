@@ -9,24 +9,26 @@
 
 .box {
     height: 15rem;
-    width: 18rem;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     border: 3px solid rgb(119, 119, 119);
     position: absolute;
-    left: 37%;
-    bottom: 10px;
+    left: 0;
+    bottom: 0;
     opacity: 0;
     transform: rotate(0deg);
+    transform: scalex(-1);
+    transform: scaley(-1);
 }
 
 .logo {
-    color: whitesmoke;
     font-size: 7rem;
     font-weight: 400;
     font-family: 'Bree Serif', serif;
     position: absolute;
-    left: 36%;
-    bottom: -20px;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
     transform: rotate(180deg);
     animation-name: l0;
     opacity: 0;
@@ -37,9 +39,33 @@
     transition: 0.3s;
 }
 
-/* Pill Preview on Home Page */
+/* Section dividers */
 
-.custom-shape-divider-top-1615186778 {
+.dividr {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.dividr:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0 ;
+    transform: scalex(1.5);
+}
+
+.pillContent {
+    background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
+    overflow: hidden;
+}
+
+.custom-shape-divider-top-1615352447 {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,34 +74,19 @@
     line-height: 0;
 }
 
-.custom-shape-divider-top-1615186778 svg {
+.custom-shape-divider-top-1615352447 svg {
     position: relative;
     display: block;
-    width: calc(180% + 1.3px);
-    height: 98px;
+    width: calc(110% + 1.3px);
+    height: 75px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1615186778 .shape-fill, .custom-shape-divider-bottom-1615191363 .shape-fill {
+.custom-shape-divider-top-1615352447 .shape-fill {
     fill: #EEEEEE;
 }
 
-.custom-shape-divider-bottom-1615191363 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1615191363 svg {
-    position: relative;
-    display: block;
-    width: calc(182% + 1.3px);
-    height: 98px;
-    transform: rotateY(180deg);
-}
+/* Pill Preview on Home Page */
 
 .prev {
     width: 100%;
@@ -112,13 +123,14 @@
     padding: 2rem;
     margin-top: 0;
     color: rgb(49, 49, 49);
-    background-color: whitesmoke;
+    background-color: #EEEEEE;
+    transition: 0.2s;
 }
 
 .pro:hover, .web:hover {
-    background-color: rgb(95, 205, 248);
-    color: white;
-
+    background-color: rgb(49, 49, 49);
+    color: #EEEEEE;
+    transition: 0.2s;
 }
 
 .contHeight2 {
@@ -184,24 +196,18 @@
 
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
-    .custom-shape-divider-top-1615186778 svg {
-        width: calc(189% + 1.3px);
-        height: 25px;
+    .custom-shape-divider-top-1615352447 svg {
+        width: calc(100% + 1.3px);
+        height: 53px;
     }
-    .custom-shape-divider-bottom-1615191363 svg {
-        width: calc(189% + 1.3px);
-        height: 25px;
-    }
+
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-    .custom-shape-divider-top-1615186778 svg {
-        width: calc(194% + 1.3px);
-        height: 29px;
+    .custom-shape-divider-top-1615352447 svg {
+        width: calc(110% + 1.3px);
+        height: 40px;
     }
-    .custom-shape-divider-bottom-1615191363 svg {
-        width: calc(194% + 1.3px);
-        height: 29px;
-    }
+
 }
