@@ -20,13 +20,18 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  contactSwtch() {
+  contactSwtchActive() {
     this.contactEnabled = !this.contactEnabled;
     if (this.contactEnabled) {
-      this.activeLink = "active border border-dark";
+      this.activeLink = "active bg-dark text-light border-bottom border-dark";
     } else {
       this.activeLink = "";
     }
+  }
+
+  contactSwtchInactive() {
+    this.activeLink = "";
+    this.contactEnabled = false;
   }
 
   drpDownActive() {

@@ -20,7 +20,6 @@
 }
 
 .card {
-    height: 70vh;
     overflow: hidden;
     margin: 1rem;
     border-radius: 25px;
@@ -35,8 +34,8 @@
 }
 
 .card:hover {
-    background-color: rgb(49, 49, 49);
     transition: 0.3s;
+    background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
 }
 
 .card:hover > a .card-text, .card:hover > a h5, .card:hover > .fontSizeUp {
