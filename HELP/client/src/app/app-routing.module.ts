@@ -4,6 +4,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ChangeLogAddComponent } from './change-log/change-log-add/change-log-add.component';
 import { ChangeLogComponent } from './change-log/change-log.component';
 import { FeatureAddComponent } from './change-log/feature-add/feature-add.component';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { WebsitesComponent } from './websites/websites.component';

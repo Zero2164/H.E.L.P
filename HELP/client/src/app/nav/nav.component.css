@@ -15,6 +15,7 @@
 .nav-link {
     border-bottom: 1px solid transparent;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .nav-link:hover {

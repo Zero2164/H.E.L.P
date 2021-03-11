@@ -23,14 +23,14 @@ a:hover, a {
 
 /* Invisible ScrollBar */
 
-body, html, .ky-css-logBox1, .ky-css-text, .pageView2 {
+body, html, .ky-css-logBox1, .ky-css-text, .pageView2, .scrollGone {
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin: 0;
     padding: 0;
 }
 
-html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webkit-scrollbar, .pageView2::-webkit-scrollbar {
+html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webkit-scrollbar, .pageView2::-webkit-scrollbar, .scrollGone::-webkit-scrollbar {
     display: none;
 }
 

@@ -17,6 +17,7 @@ import { WebsitesComponent } from './websites/websites.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { HomeComponent } from './home/home.component';
     ProjectsComponent,
     AboutMeComponent,
     HomeComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
