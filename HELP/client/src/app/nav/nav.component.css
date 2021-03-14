@@ -13,13 +13,32 @@
 }
 
 .nav-link {
-    border-bottom: 1px solid transparent;
+    border: 1px solid transparent;
+    /* border-radius: 25px; */
     font-weight: 500;
     cursor: pointer;
 }
 
-.nav-link:hover {
-    border-bottom: 1px solid black;
+.nav-link:hover  {
+    border: 1px solid rgb(68, 68, 68);
+    /* border-radius: 25px; */
+    transition: 0.3s;
+}
+
+.activeNavyLink {
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 25px;
+    transition: 0.3s;
+    z-index: 98;
+}
+
+.activeContactLink {
+    border: 1px solid rgb(68, 68, 68);
+    background-color: rgb(68, 68, 68);
+    color: whitesmoke !important;
+    border-radius: 25px;
+    transition: 0.3s;
+    z-index: 98;
 }
 
 .homeMnu {

@@ -1,8 +1,8 @@
-<div class="contactOverlay scrollGone">
+<div class="contactOverlay scrollGone" (click)="disableOverlayActive()" [class]="displayStyle">
     <div class="container mt-5 pt-5">
         <div class="row mt-5 mb-5 pb-5 d-flex justify-content-center">
             <div class="card card-body col-12 col-lg-3 text-center shdwClass">
-                <a href="https://github.com/Zero2164/Zero2164">
+                <a href="https://github.com/Zero2164/Zero2164" (click)="directFeedbk()">
                     <img src="https://avatars.githubusercontent.com/u/61925456?s=460&u=d8155120296009bc68d87e33edad41c35460a57e&v=4"
                         class="card-img-top rounded-circle gitImg">
                     <h5 class="card-title">Github Profile</h5>
@@ -34,8 +34,8 @@
                 </a>
             </div>
             <div class="card card-body col-12 col-lg-3 text-center shdwClass pb-2">
-                <a href="https://www.linkedin.com/in/kyle-lamont-a72326152">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5635AQGm-XDjIKZZeQ/profile-framedphoto-shrink_400_400/0/1603083639020?e=1615528800&v=beta&t=BRY58Y4yXOqRVReACBL7MjPasnzIS8Zj2mX4l8UMRqo"
+                <a href="https://www.linkedin.com/in/kyle-lamont-a72326152" (click)="directFeedbk()">
+                    <img src="https://media-exp1.licdn.com/dms/image/C5635AQGm-XDjIKZZeQ/profile-framedphoto-shrink_200_200/0/1603083639020?e=1615633200&v=beta&t=ZXIDZkHK5GT0ka66KFsciQLKlA8sn3lCkM6WeEGN1zQ"
                         class="card-img-top rounded-circle gitImg">
                     <h5 class="card-title">LinkedIn Profile</h5>
                     <p class="card-text scrollGone border-top border-secondary pb-5">
@@ -68,7 +68,7 @@
                 </a>
             </div>
             <div class="card card-body d-flex col-12 col-lg-3 text-center shdwClass">
-                <a href="mailto:kylejlamont@hotmail.com" class="emailCard justify-content-center align-items-center">
+                <a href="mailto:kylejlamont@hotmail.com" class="emailCard justify-content-center align-items-center" (click)="directFeedbk()">
                     <fa-icon [icon]="faEnvelope" class="fontSizeUp gitImg"></fa-icon>
                     <h5 class="card-title">Email Kyle</h5>
                 </a>

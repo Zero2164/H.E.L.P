@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { faBars, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -20,10 +20,11 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   contactSwtchActive() {
     this.contactEnabled = !this.contactEnabled;
     if (this.contactEnabled) {
-      this.activeLink = "active bg-dark text-light border-bottom border-dark";
+      this.activeLink = "active activeContactLink";
     } else {
       this.activeLink = "";
     }

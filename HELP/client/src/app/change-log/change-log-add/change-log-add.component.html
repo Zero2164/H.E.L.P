@@ -10,7 +10,7 @@
                         placeholder="Change Title" autocomplete="off" autofocus>
                     <input [(ngModel)]="chng.Created" name="Created" type="text" placeholder="Date/Time Change Occurred"
                         class="form-control mb-2 bg-light rounded theme-red" bsDatepicker
-                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-red', dateInputFormat: 'MMMM Do YYYY'}"
+                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-blue', dateInputFormat: 'MMMM Do YYYY'}"
                         required>
                     <angular-editor name="ChangeDetails" class="text-left" [config]="editorConfig"
                         [placeholder]="'Enter change details here...'" [(ngModel)]="chng.ChangeDetails">

@@ -1,29 +1,35 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" [class]="shdwClass">
-  <a class="navbar-brand p-0 my-0 mx-2" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLink="/" title="H.E.L.P Home Page"><fa-icon [icon]="faHandsHelping" class="fontSizeUp homeMnu px-2"></fa-icon></a>
-  <button type="button" class="navbar-toggler collapseMnu" [class]="collapseMnuHvr" (click)="drpDownActive()" [attr.aria-expanded]="!isCollapsed"
-    aria-controls="collapseBasic">
+  <a class="navbar-brand p-0 my-0 mx-2" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLink="/"
+    title="H.E.L.P Home Page">
+    <fa-icon [icon]="faHandsHelping" class="fontSizeUp homeMnu px-2"></fa-icon>
+  </a>
+  <button type="button" class="navbar-toggler collapseMnu" [class]="collapseMnuHvr" (click)="drpDownActive()"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     <fa-icon [icon]="faBars" class="fontSizeUp2"></fa-icon>
   </button>
   <div id="collapseBasic" class="collapse navbar-collapse text-center" [collapse]="isCollapsed" [isAnimated]="true">
     <ul class="navbar-nav ml-md-auto my-4 my-md-auto">
-      <li class="nav-item mx-2">
+      <li class="nav-item mx-2 my-2 my-md-0">
         <a class="nav-link" (click)="drpDownInactive()" (click)="contactSwtchActive()" [class]="activeLink">Contact</a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="about" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLinkActive="active border-bottom border-dark">About</a>
+      <li class="nav-item mx-2 my-2 my-md-0">
+        <a class="nav-link" routerLink="about" (click)="drpDownInactive()" (click)="contactSwtchInactive()"
+          routerLinkActive="active activeNavyLink">About</a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="projects" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLinkActive="active border-bottom border-dark">Projects</a>
+      <li class="nav-item mx-2 my-2 my-md-0">
+        <a class="nav-link" routerLink="projects" (click)="drpDownInactive()" (click)="contactSwtchInactive()"
+          routerLinkActive="active activeNavyLink">Projects</a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="websites" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLinkActive="active border-bottom border-dark">Websites</a>
+      <li class="nav-item mx-2 my-2 my-md-0 ">
+        <a class="nav-link" routerLink="websites" (click)="drpDownInactive()" (click)="contactSwtchInactive()"
+          routerLinkActive="active activeNavyLink">Websites</a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" routerLink="changes" (click)="drpDownInactive()" (click)="contactSwtchInactive()" routerLinkActive="active border-bottom border-dark">Changes</a>
+      <li class="nav-item mx-2 my-2 my-md-0">
+        <a class="nav-link" routerLink="changes" (click)="drpDownInactive()" (click)="contactSwtchInactive()"
+          routerLinkActive="active activeNavyLink">Changes</a>
       </li>
     </ul>
   </div>
-
 </nav>
 
-<app-contact *ngIf="contactEnabled"></app-contact>
+<app-contact [activeLink]="activeLink" [contactEnabled]="contactEnabled" (updateLink)="activeLink=$event" (updateLink2)="contactEnabled=$event" *ngIf="contactEnabled"></app-contact>

@@ -23,6 +23,7 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       progressBar: true,
+      timeOut: 3000,
     })
   ],
   exports: [
