@@ -62,11 +62,12 @@
     background-color: rgb(43, 78, 107);
 }
 
-.hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover > .appText {
+.hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover  .appText {
     opacity: 0;
     font-size: 2rem;
     transition: 0.2s;
 }
+
 
 .bgAppBlue {
     background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
