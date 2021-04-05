@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [],
@@ -24,7 +25,8 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
       positionClass: 'toast-bottom-right',
       progressBar: true,
       timeOut: 3000,
-    })
+    }),
+    AlertModule.forRoot()
   ],
   exports: [
     CollapseModule,
@@ -34,7 +36,8 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     FontAwesomeModule,
     AngularEditorModule,
     NgxScrollTopModule,
-    ToastrModule
+    ToastrModule,
+    AlertModule
   ]
 })
 export class SharedModule { }
