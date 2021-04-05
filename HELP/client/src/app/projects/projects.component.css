@@ -35,6 +35,10 @@
     background-image: url("../../assets/Images/canvasGameApp.PNG");
 }
 
+.hubAppImg {
+    background-image: url("../../assets/Images/hubAppHomePage.PNG");
+}
+
 .appText {
     font-weight: bold;
     color: whitesmoke;
@@ -69,8 +73,9 @@
 }
 
 
-.bgAppBlue {
-    background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
+.miniNav {
+    border-radius: 25px;
+    font-size: large;
 }
 
 
@@ -94,3 +99,4 @@
 .custom-shape-divider-top-1615196599 .shape-fill {
     fill: #EEEEEE;
 }
+

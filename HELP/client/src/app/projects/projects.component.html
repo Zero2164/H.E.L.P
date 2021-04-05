@@ -1,9 +1,28 @@
-<div class="bg-light pt-5 pb-5 text-center">
+<div class="bg-light pageView m-5 pt-5 pb-5 text-center">
+    <a id="staticApps"></a>
+    <nav class="navbar navbar-expand navbar-dark bg-dark col-11 col-md-7 col-lg-5 col-xl-3 m-auto miniNav">
+        <div class="container">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link" routerLink="/projects" fragment="staticApps">Static</a>
+                </li>
+                <div class="border-left border-secondary"></div>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" routerLink="/projects" fragment="games">Games</a>
+                </li>
+                <div class="border-right border-secondary"></div>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" routerLink="/projects" fragment="angular">Angular</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
-        <h1 class="pt-5">Utilities</h1>
+        <h1 class="pt-5">Static Apps</h1>
         <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
             <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
-                <a href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/score-keeper-app/index.html">
+                <a
+                    href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/score-keeper-app/index.html">
                     <div class="skAppImg hvrImg shdwClass">
                         <div class="appTextBg"></div>
                         <h4 class="appText">Score Keeper</h4>
@@ -18,17 +37,10 @@
                     </div>
                 </a>
             </div>
-            <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
-                <a href="https://help-portfolio.firebaseapp.com/changes">
-                    <div class="cfNfImg hvrImg shdwClass">
-                        <div class="appTextBg"></div>
-                        <h4 class="appText">Change Log &<br>Upcoming Features</h4>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </div>
+<a id="games"></a>
 <div class="bg-dark position-relative">
     <div class="custom-shape-divider-top-1615196599">
         <svg data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -36,12 +48,13 @@
         </svg>
     </div>
 </div>
-<div class="bgAppBlue pt-5 pb-5 pageView text-center">
+<div class="bgAppGames pt-5 pb-0 pageView text-center">
     <div class="container text-light">
-        <h1 class="mt-5 pt-5">Games</h1>
+        <h1 class="mt-5 pt-5">Canvas Games</h1>
         <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
             <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
-                <a href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/brutal-point-game/index.html">
+                <a
+                    href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/brutal-point-game/index.html">
                     <div class="canvasGameImg hvrImg shdwClass">
                         <div class="appTextBg2"></div>
                         <h4 class="appText">Brutalpoint</h4>
@@ -52,10 +65,44 @@
                 <a href="https://help-portfolio.firebaseapp.com/assets/static/apps/employee-rush-game/index.html">
                     <div class="hvrImg shdwClass">
                         <div class="appTextBg2"></div>
-                        <h4 class="appText">Employee Rush</h4>
+                        <h4 class="appText">(W.I.P)<br>Employee Rush</h4>
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="bg-transparent">
+        <div class="col-12 p-0 dividr2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#EEEEEE" fill-opacity="1"
+                    d="M0,32L0,128L160,128L160,160L320,160L320,96L480,96L480,192L640,192L640,256L800,256L800,224L960,224L960,256L1120,256L1120,96L1280,96L1280,256L1440,256L1440,320L1280,320L1280,320L1120,320L1120,320L960,320L960,320L800,320L800,320L640,320L640,320L480,320L480,320L320,320L320,320L160,320L160,320L0,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </div>
+</div>
+<a id="angular"></a>
+<div class="bgAppAng pt-5 mt-0 pb-5 pageView text-center">
+    <div class="container text-light">
+        <h1 class="mt-0 pt-5 text-dark">Angular Apps</h1>
+        <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
+            <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
+                <a href="https://hub-app-2164.firebaseapp.com/">
+                    <div class="hubAppImg hvrImg shdwClass">
+                        <div class="appTextBg"></div>
+                        <h4 class="appText">Homepage Widget</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
+                <a href="https://help-portfolio.firebaseapp.com/changes">
+                    <div class="cfNfImg hvrImg shdwClass">
+                        <div class="appTextBg"></div>
+                        <h4 class="appText">Change Log &<br>Upcoming Features</h4>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </div>

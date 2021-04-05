@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  itemsPerSlide = 2;
+  singleSlideOffset = false;
+  noWrap = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

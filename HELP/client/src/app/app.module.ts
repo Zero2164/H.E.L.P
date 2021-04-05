@@ -41,7 +41,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
