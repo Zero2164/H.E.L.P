@@ -11,11 +11,15 @@ export class AboutMeComponent implements OnInit {
   faLinkedin = faLinkedin ;
   faGithub = faGithub;
   faEnvelope = faEnvelope;
+  certsEnabled = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  certSwtchActive() {
+    this.certsEnabled = !this.certsEnabled;
+  }
 
 }

@@ -3,7 +3,7 @@
         <div class="column pt-5 mt-5 px-3 textLift">
             <div class="container p-4">
                 <img class="aboutImg img-thumbnail bg-dark"
-                    src="https://avatars.githubusercontent.com/u/61925456?s=460&u=d8155120296009bc68d87e33edad41c35460a57e&v=4"
+                    src="../../assets/Images/linkedIn.png"
                     alt="kyle-Github-photo">
             </div>
             <div class="row mt-5">
@@ -53,6 +53,11 @@
                         <a href="mailto:kylejlamont@hotmail.com">
                             <fa-icon [icon]="faEnvelope" class="fontSizeUp btn btn-light btn-lg m-4 rounded"></fa-icon>
                         </a>
+                    </div>
+                    <hr>
+                    <div class="row mt-0 d-flex justify-content-center">
+                        <h4 class="col-12 mb-3 pb-3">See my Certifications</h4>
+                        <button class="btn btn-lg btn-block btn-outline-primary" (click)="certSwtchActive()">Certificates</button>
                     </div>
                 </div>
             </div>
@@ -115,3 +120,5 @@
         </div>
     </div>
 </div>
+
+<app-certificates [certsEnabled]="certsEnabled" (updateLink2)="certsEnabled=$event" *ngIf="certsEnabled"></app-certificates>

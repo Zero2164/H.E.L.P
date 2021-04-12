@@ -21,11 +21,15 @@
         <h1 class="mt-5 pt-5">Static Apps</h1>
         <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
             <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
+                <fa-icon [icon]="faInfoCircle" class="infoIcon" (click)="info()"></fa-icon>
                 <a
                     href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/score-keeper-app/index.html">
-                    <div class="skAppImg hvrImg shdwClass">
+                    <div [style]="appDisp1" class="skAppImg hvrImg shdwClass">
                         <div class="appTextBg"></div>
                         <h4 class="appText">Score Keeper</h4>
+                    </div>
+                    <div [style]="appDisp2" class="skAppImg hvrImg shdwClass">
+                        <h3 class="text-light">This is a test</h3>
                     </div>
                 </a>
             </div>

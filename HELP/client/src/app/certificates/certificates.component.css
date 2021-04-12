@@ -1,0 +1,16 @@
+.contactOverlay {
+    position: fixed;
+    background-color: rgba(70, 70, 70, 0.925);
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll; 
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.certs {
+    width: 100%;
+        
+}

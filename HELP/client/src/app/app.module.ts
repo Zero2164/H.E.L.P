@@ -18,6 +18,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { CertificatesComponent } from './certificates/certificates.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutMeComponent,
     HomeComponent,
     ContactComponent,
+    CertificatesComponent,
   ],
   imports: [
     BrowserModule,

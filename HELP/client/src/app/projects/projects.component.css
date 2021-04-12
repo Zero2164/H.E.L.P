@@ -66,6 +66,23 @@
     background-color: rgb(43, 78, 107);
 }
 
+.infoIcon {
+    font-size: 2rem;
+    padding: 1rem;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.3s;
+}
+
+.infoIcon:hover {
+    filter: drop-shadow(1px 1px 10px rgb(243, 243, 243));
+    transition: 0.3s;
+}
+
 .hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover  .appText {
     opacity: 0;
     font-size: 2rem;
