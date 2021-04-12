@@ -1,9 +1,9 @@
 .appPrev {
-    width: 20rem;
+    width: 12rem;
     height: 20rem;
     border-radius: 25px;
     padding: 0;
-    margin: 0 auto;
+    margin: 1rem;
 }
 
 .hvrImg {
@@ -17,6 +17,10 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+}
+
+a:active, a:focus, a:target, a {
+    color: white !important;
 }
 
 .skAppImg {
@@ -66,25 +70,21 @@
     background-color: rgb(43, 78, 107);
 }
 
-.infoIcon {
-    font-size: 2rem;
-    padding: 1rem;
-    color: whitesmoke;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
+.list-group-flush {
+    font-size: 1.3rem;
+    position: fixed;
     z-index: 99;
-    transition: 0.3s;
+    height: 100vh;
 }
 
-.infoIcon:hover {
-    filter: drop-shadow(1px 1px 10px rgb(243, 243, 243));
-    transition: 0.3s;
+.listGroupContainer {
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
 
-.infoDetails {
-    position: absolute;
+.backgroundNav, .listGroupContainer, .list-group-flush {
+    background-color: rgba(37, 37, 37, 0.521);
 }
 
 .hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover  .appText {
@@ -97,6 +97,10 @@
 .miniNav {
     font-size: large;
     font-weight: 500;
+    margin-top: 40rem;
+    padding-top: 1.3rem;
+    position: fixed;
+    z-index: 10;
 }
 
 

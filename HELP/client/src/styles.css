@@ -46,6 +46,8 @@ html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webk
     background-color: whitesmoke;
 }
 
+/* Creates SVG Background */
+
 .bgAppAng {
     background-repeat: no-repeat;
     background-size: cover;
