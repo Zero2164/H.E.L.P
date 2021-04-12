@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-about-me',
@@ -8,18 +9,21 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
-  faLinkedin = faLinkedin ;
+  faLinkedin = faLinkedin;
   faGithub = faGithub;
   faEnvelope = faEnvelope;
   certsEnabled = false;
 
-  constructor() { }
+  constructor(public toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
   certSwtchActive() {
-    this.certsEnabled = !this.certsEnabled;
+    this.toastr.info("Loading Certs..")
+    setTimeout(() => {
+      this.certsEnabled = !this.certsEnabled;
+    }, 1500);
   }
 
 }

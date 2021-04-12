@@ -24,7 +24,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       progressBar: true,
-      timeOut: 3000,
+      timeOut: 1000,
     }),
     AlertModule.forRoot()
   ],

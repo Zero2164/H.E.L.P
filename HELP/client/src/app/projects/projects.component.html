@@ -1,35 +1,31 @@
 <div class="bg-light mt-5 pt-5 pb-5 text-center">
-    <nav class="navbar navbar-expand navbar-dark bg-dark mt-5 col-11 col-md-7 col-lg-5 col-xl-3 m-auto miniNav">
+    <nav class="navbar navbar-expand navbar-light bg-secondary mt-5 m-auto miniNav">
         <div class="container">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item mx-3">
                     <a class="nav-link" routerLink="/projects" fragment="staticApps">Static</a>
                 </li>
-                <div class="border-left border-secondary"></div>
+                <div class="border-left border-light"></div>
                 <li class="nav-item mx-3">
                     <a class="nav-link" routerLink="/projects" fragment="games">Games</a>
                 </li>
-                <div class="border-right border-secondary"></div>
+                <div class="border-right border-light"></div>
                 <li class="nav-item mx-3">
                     <a class="nav-link" routerLink="/projects" fragment="angular">Angular</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <hr class="col-9">
     <a id="staticApps"></a>
     <div class="container">
         <h1 class="mt-5 pt-5">Static Apps</h1>
         <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
             <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
-                <fa-icon [icon]="faInfoCircle" class="infoIcon" (click)="info()"></fa-icon>
-                <a
-                    href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/score-keeper-app/index.html">
-                    <div [style]="appDisp1" class="skAppImg hvrImg shdwClass">
+                <a href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/score-keeper-app/index.html">
+                    <div class="skAppImg hvrImg shdwClass">
                         <div class="appTextBg"></div>
                         <h4 class="appText">Score Keeper</h4>
-                    </div>
-                    <div [style]="appDisp2" class="skAppImg hvrImg shdwClass">
-                        <h3 class="text-light">This is a test</h3>
                     </div>
                 </a>
             </div>
@@ -57,8 +53,7 @@
         <h1 class="mt-5 pt-5">Canvas Games</h1>
         <div class="row pt-5 pb-5 mt-2 px-2 d-flex justify-content-center">
             <div class="appPrev bg-primary col-12 col-md-5 col-lg-5 my-4">
-                <a
-                    href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/brutal-point-game/index.html">
+                <a href="https://help-portfolio.firebaseapp.com/assets/static/apps/tutorials/brutal-point-game/index.html">
                     <div class="canvasGameImg hvrImg shdwClass">
                         <div class="appTextBg2"></div>
                         <h4 class="appText">Brutalpoint</h4>

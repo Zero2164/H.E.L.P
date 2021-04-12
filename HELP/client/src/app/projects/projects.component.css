@@ -83,6 +83,10 @@
     transition: 0.3s;
 }
 
+.infoDetails {
+    position: absolute;
+}
+
 .hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover  .appText {
     opacity: 0;
     font-size: 2rem;
@@ -91,8 +95,21 @@
 
 
 .miniNav {
-    border-radius: 25px;
     font-size: large;
+    font-weight: 500;
+}
+
+
+.nav-link {
+    border: 1px solid transparent;
+    transition: 0.3s;
+    padding: 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: rgb(160, 160, 160);
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
 
