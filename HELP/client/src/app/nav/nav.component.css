@@ -52,6 +52,11 @@
     margin-right: 2rem;
 }
 
+.homeMnu2 {
+    transition: 0.3s;
+    margin-right: 0.5rem;
+}
+
 .fontSizeUp {
     font-size: 2rem;
 }
