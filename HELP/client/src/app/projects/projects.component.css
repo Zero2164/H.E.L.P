@@ -98,7 +98,7 @@ a:active, a:focus, a:target, a {
     font-size: large;
     font-weight: 500;
     margin-top: 40rem;
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
     position: fixed;
     z-index: 10;
 }
@@ -136,5 +136,52 @@ a:active, a:focus, a:target, a {
 
 .custom-shape-divider-top-1615196599 .shape-fill {
     fill: #EEEEEE;
+}
+
+.custom-shape-divider-bottom-1618235735 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1618235735 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 55px;
+}
+
+.custom-shape-divider-bottom-1618235735 .shape-fill {
+    fill: #EEEEEE;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1615196599 svg {
+        width: calc(100% + 1.3px);
+        height: 53px;
+    }
+    .custom-shape-divider-bottom-1618235735 svg {
+        width: calc(100% + 1.3px);
+        height: 53px;
+    }
+
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1615196599 svg {
+        width: calc(110% + 1.3px);
+        height: 40px;
+    }
+    .custom-shape-divider-bottom-1618235735 svg {
+        width: calc(110% + 1.3px);
+        height: 40px;
+    }
+
 }
 
