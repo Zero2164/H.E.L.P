@@ -8,10 +8,6 @@
     opacity: 1;
 }
 
-.navbar-brand {
-    border-right: 1px solid black;
-}
-
 .nav-link {
     border: 1px solid transparent;
     /* border-radius: 25px; */
@@ -43,18 +39,18 @@
 
 .homeMnu {
     transition: 0.3s;
-    margin-right: 0.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid transparent;
 }
+
+.homeMnu:active, .homeMnu:focus, .homeMnu:target, .homeMnu {
+    color: rgb(60, 73, 87);
+    
+}   
 
 .homeMnu:hover {
     color: rgb(95, 205, 248);
     transition: 0.3s;
-    margin-right: 2rem;
-}
-
-.homeMnu2 {
-    transition: 0.3s;
-    margin-right: 0.5rem;
 }
 
 .fontSizeUp {
@@ -77,6 +73,7 @@
 .collapseMnuHvr {
     transform: rotate(90deg);
 }
+
 
 
 

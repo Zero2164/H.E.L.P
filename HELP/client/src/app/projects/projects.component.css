@@ -20,7 +20,13 @@
 }
 
 a:active, a:focus, a:target, a {
-    color: white !important;
+    color: rgb(68, 68, 68) !important;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(75, 164, 224) !important; 
+    transition: 0.3s;
 }
 
 .skAppImg {
@@ -71,20 +77,28 @@ a:active, a:focus, a:target, a {
 }
 
 .list-group-flush {
-    font-size: 1.3rem;
+    font-size: 1rem;
     position: fixed;
     z-index: 99;
-    height: 100vh;
+    border-radius: 25px;
 }
 
 .listGroupContainer {
-    height: 100vh;
     top: 0;
     left: 0;
+    border-radius: 25px;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .backgroundNav, .listGroupContainer, .list-group-flush {
-    background-color: rgba(37, 37, 37, 0.521);
+    background-color: #EEEEEE;
+}
+
+.backgroundNav {
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .hvrImg:hover > .appTextBg, .hvrImg:hover > .appTextBg2, .hvrImg:hover  .appText {
@@ -95,26 +109,20 @@ a:active, a:focus, a:target, a {
 
 
 .miniNav {
-    font-size: large;
+    font-size: 1rem;
     font-weight: 500;
-    margin-top: 40rem;
-    padding-top: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 0.3rem;
     position: fixed;
     z-index: 10;
 }
 
 
 .nav-link {
-    border: 1px solid transparent;
     transition: 0.3s;
     padding: 0.5rem;
 }
 
-.nav-link:hover {
-    background-color: rgb(160, 160, 160);
-    border-radius: 25px;
-    transition: 0.3s;
-}
 
 
 .custom-shape-divider-top-1615196599 {
