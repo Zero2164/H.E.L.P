@@ -35,7 +35,7 @@ html::-webkit-scrollbar, .ky-css-logBox1::-webkit-scrollbar, .ky-css-text::-webk
 }
 
 /* Create box shadow */
-.card.shdw, .ky-css-logBox1, .ky-css-logBox2, .shdwClass, .prev {
+.card.shdw, .ky-css-logBox1, .ky-css-logBox2, .shdwClass {
     -moz-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     -webkit-box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);
     box-shadow: 0 8px 6px rgba(0, 0, 0, 0.37);

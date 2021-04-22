@@ -44,17 +44,20 @@
         </div>
     </div>
     <div class="prev container my-0 py-0 d-flex justify-content-center">
-        <video autoplay muted loop id="myVideo" class="d-none d-sm-inline">
-            <source src="../../assets/video/Coding sequences.mp4" type="video/mp4">
+        <video *ngIf="true" autoplay muted onloadedmetadata="this.muted = true" oncanplay="this.play()" loop id="myVideo" class="d-none d-sm-inline">
+            <source src="../../assets/video/Codeflying.mov" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <div class="row divNew">
-            <div class="text-light col-12 position-relative pt-5">
+        <div class="row divNew shdwClass px-lg-5">
+            <div class="text-light col-12 position-relative py-3 pt-lg-5 mt-lg-5">
+                <fa-icon [icon]="faCode" class="iconSize rounded m-4"></fa-icon>
                 <h4>See my developing journey, via the buttons below.</h4>
-                <div class="container mt-5 d-flex justify-content-center">
-                    <button id="btn1" class="btn btn-outline-light btn-lg rounded m-2 col-lg-5" routerLink="projects">Projects</button>
+                <div class="container mt-3 mt-lg-5 d-flex justify-content-center align-items-stretch">
+                    <button id="btn1" class="btn btn-outline-light btn-lg rounded m-2 col-lg-5"
+                        routerLink="projects">Projects</button>
                     <br>
-                    <button class="btn btn-outline-light btn-lg rounded m-2 col-lg-5" routerLink="websites">Websites</button>
+                    <button class="btn btn-outline-light btn-lg rounded m-2 col-lg-5"
+                        routerLink="websites">Websites</button>
                 </div>
             </div>
         </div>

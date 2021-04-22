@@ -35,6 +35,7 @@
     z-index: 2;
 }
 
+
 .logoFinImg {
     transition: 0.3s;
 }
@@ -46,6 +47,8 @@
     width: 100%;
     height: 33vh;
     overflow: hidden;
+    z-index: 2;
+    margin-top: 10rem;
 }
 
 .dividr:before {
@@ -64,12 +67,16 @@
     overflow: hidden;
 }
 
+.iconSize {
+    font-size: 3rem;
+}
+
 .divNew {
-    background: linear-gradient(45deg, rgb(84, 182, 221), rgb(26, 129, 247));
-    height: 100vh;
-    position: absolute;
-    border-radius: 25px;
-    padding: 5rem;
+    background: linear-gradient(45deg, rgb(85, 180, 235), rgb(18, 117, 163));
+    height: 50rem;
+    padding-top: 5rem;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 10px rgb(160, 234, 247));
 }
 
 #myVideo {
@@ -79,6 +86,7 @@
     min-height: 100%;
     z-index: 0;
   }
+  
 
 .custom-shape-divider-top-1615352447 {
     position: absolute;
@@ -105,6 +113,7 @@
 
 .prev {
     height: 50vh;
+    margin-bottom: 5rem;
 }
 
 .brngForward {
