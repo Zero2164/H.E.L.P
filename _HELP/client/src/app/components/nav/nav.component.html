@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="'push'" [opened]="false" position="end">
+    <mat-nav-list class="mini-nav">
+      <mat-selection-list [multiple]="false">
+        <app-nav-links (click)="drawer.toggle()"  [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
+      </mat-selection-list>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="light-bg">
+      <button mat-icon-button>
+        <mat-icon class="icon-flip" routerLink="/">dashboard</mat-icon>
+      </button>
+      <ng-container *ngIf="!(isHandset$ | async)">
+        <mat-selection-list class="nav" [multiple]="false">
+          <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
+        </mat-selection-list>
+      </ng-container>
+      <button type="button" aria-label="Toggle sidenav" class="menu-small" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

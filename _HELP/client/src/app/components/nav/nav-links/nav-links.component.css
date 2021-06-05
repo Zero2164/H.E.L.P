@@ -1,0 +1,14 @@
+.selected, .nav-link:hover {
+    /* background-color: rgba(163, 163, 163, 0.342) !important; */
+    border-bottom: 4px solid rgb(85, 180, 235);
+    border-right: 4px solid rgb(85, 180, 235);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.nav-link {
+    transition: 0.1s;
+    background-color: transparent !important;
+    margin: 0 auto;
+    border-radius: 10px;
+}

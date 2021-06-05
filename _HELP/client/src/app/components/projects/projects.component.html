@@ -1,0 +1,29 @@
+<div class="content-wrapper">
+    <div class="container-wrapper box-contain">
+        <div class="container list-box backlog-box mat-elevation-z4">
+            <h2 class="center-elem">Backlog</h2>
+            <mat-card class="drpList" cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo"
+                (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[inProgressList, doneList]">
+                <app-tasks (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task">
+                </app-tasks>
+            </mat-card>
+        </div>
+        <div class="container in-progress-box list-box mat-elevation-z4">
+            <h2 class="center-elem">In Progress</h2>
+            <mat-card class="drpList" cdkDropList id="inProgress" #inProgressList="cdkDropList"
+                [cdkDropListData]="inProgress" (cdkDropListDropped)="drop($event)"
+                [cdkDropListConnectedTo]="[todoList, doneList]">
+                <app-tasks (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress" cdkDrag
+                    [task]="task"></app-tasks>
+            </mat-card>
+        </div>
+        <div class="container list-box done-box mat-elevation-z4">
+            <h2 class="center-elem">Done</h2>
+            <mat-card class="drpList" cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done"
+                (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[todoList, inProgressList]">
+                <app-tasks (edit)="editTask('done', $event)" *ngFor="let task of done" cdkDrag [task]="task">
+                </app-tasks>
+            </mat-card>
+        </div>
+    </div>
+</div>
