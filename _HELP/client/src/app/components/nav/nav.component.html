@@ -13,28 +13,35 @@
     </mat-nav-list>
     <div matRipple class="home-btn-div" title="Return to Home Page" routerLink="/" (click)="drawer.close()"
       (click)="closeDrawState()">
-      <span class="home-txt">Home Page <mat-icon>login</mat-icon></span>
-      <mat-icon class="home-btn">home</mat-icon>
-      <mat-icon class="home-btn logo-btn">dashboard</mat-icon>
+      <div class="home-div-unskew">
+        <span class="home-txt">Home</span>
+        <mat-icon class="home-btn">home</mat-icon>
+        <mat-icon class="home-btn logo-btn">dashboard</mat-icon>
+      </div>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="main-container">
-      <mat-toolbar class="transparent-bg">
-        <button mat-icon-button title="Return to Home Page">
-          <mat-icon class="icon-flip" routerLink="/">dashboard</mat-icon>
-        </button>
-        <ng-container *ngIf="!(isHandset$ | async)">
-          <mat-selection-list class="nav" [multiple]="false">
-            <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
-          </mat-selection-list>
-        </ng-container>
-        <button type="button" aria-label="Toggle sidenav" class="menu-small" mat-icon-button (click)="openDrawState()"
-          (click)="drawer.open()" *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon ">menu</mat-icon>
-        </button>
-      </mat-toolbar>
-    </div>
-    <router-outlet></router-outlet>
+    <mat-toolbar class="light-bg">
+      <div class="main-container">
+        <mat-toolbar class="light-bg">
+          <button mat-icon-button title="Return to Home Page">
+            <mat-icon class="icon-flip" routerLink="/">dashboard</mat-icon>
+          </button>
+          <ng-container *ngIf="!(isHandset$ | async)">
+            <mat-selection-list class="nav" [multiple]="false">
+              <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
+            </mat-selection-list>
+          </ng-container>
+        </mat-toolbar>
+      </div>
+      <div class="col-menu-containr" *ngIf="isHandset$ | async">
+        <div class="col-grp-containr">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="openDrawState()"
+            (click)="drawer.open()">
+            <mat-icon aria-label="Side nav toggle icon ">menu</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

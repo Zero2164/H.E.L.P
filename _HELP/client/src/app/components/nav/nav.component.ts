@@ -24,6 +24,10 @@ export class NavComponent implements OnInit {
     {
       title: 'Resume',
       link: 'resume'
+    },
+    {
+      title: 'Contact',
+      link: 'contact'
     }
   ];
 

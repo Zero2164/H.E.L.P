@@ -12,6 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { SharedModule } from './_modules/shared.module';
 import { TasksComponent } from './components/projects/tasks/tasks.component';
 import { NavLinksComponent } from './components/nav/nav-links/nav-links.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NavLinksComponent } from './components/nav/nav-links/nav-links.componen
     ResumeComponent,
     AboutComponent,
     TasksComponent,
-    NavLinksComponent
+    NavLinksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

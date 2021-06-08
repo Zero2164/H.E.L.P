@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -16,10 +17,10 @@ html, body {
     -webkit-tap-highlight-color: transparent;
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
     display: none;
 }
-
 
 
 /* Custom Background Color Classes */
@@ -36,6 +37,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     background-color: transparent;
 }
 
+
 /* Custom Position Classes */
 
 .center-elem {
@@ -44,12 +46,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .mat-drawer-shown {
-    position: absolute !important;
+    position: fixed !important;
     top: 0 !important;
-    height: 100vh !important; 
+    height: 100vh !important;
     width: 100vw !important;
-    z-index: 1;
 }
+
 
 .contain-elem {
     display: flex;
@@ -63,24 +65,28 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  } 
-  @media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
     .main-container {
         width: 540px;
     }
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .main-container {
         width: 720px;
     }
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .main-container {
         width: 960px;
     }
-  }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     .main-container {
         width: 1140px;
     }
-  }
+}
