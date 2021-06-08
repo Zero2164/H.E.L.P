@@ -10,6 +10,8 @@ import { Navlinks } from './nav-links/navlinks';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  checkDrawState: boolean;
+  chngDrawState: boolean;
   navLinks: Navlinks[] = [
     {
       title: 'About',
@@ -25,16 +27,32 @@ export class NavComponent implements OnInit {
     }
   ];
 
+
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
-constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
-  ngOnInit(): void {
-    console.log(this.navLinks[1])
+  ngOnInit() { }
+
+  changeDrawState() {
+    this.checkDrawState = !this.checkDrawState;
+    if (this.checkDrawState) {
+      this.chngDrawState = true;
+    } else if (!this.checkDrawState) {
+      this.chngDrawState = false;
+    }
   }
 
+  closeDrawState() {
+    this.chngDrawState = false;
+  }
+
+  openDrawState() {
+    this.chngDrawState = true;
+  }
 }
