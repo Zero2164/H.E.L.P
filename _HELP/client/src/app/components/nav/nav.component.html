@@ -1,18 +1,18 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="'push'" [opened]="(isHandset$ | async) && chngDrawState" position="end">
-    <button mat-button class="transparent-bg cancel-btn" (click)="drawer.close()" (click)="closeDrawState()"
+    [mode]="'push'" [opened]="(isHandset$ | async) && checkDrawState" position="end">
+    <button mat-button class="transparent-bg cancel-btn" (click)="drawer.close()" (click)="changeDrawState(false)"
       title="Close Menu">
       <mat-icon>clear</mat-icon>
     </button>
     <mat-nav-list class="mini-nav">
       <mat-selection-list [multiple]="false">
-        <app-nav-links (click)="drawer.close()" (click)="closeDrawState()" [navlink]="navLink"
+        <app-nav-links (click)="drawer.close()" (click)="changeDrawState(false)" [navlink]="navLink"
           *ngFor="let navLink of navLinks"></app-nav-links>
       </mat-selection-list>
     </mat-nav-list>
     <div matRipple class="home-btn-div" title="Return to Home Page" routerLink="/" (click)="drawer.close()"
-      (click)="closeDrawState()">
+      (click)="changeDrawState(false)">
       <div class="home-div-unskew">
         <span class="home-txt">Home</span>
         <mat-icon class="home-btn">home</mat-icon>
@@ -32,15 +32,11 @@
               <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
             </mat-selection-list>
           </ng-container>
-        </mat-toolbar>
-      </div>
-      <div class="col-menu-containr" *ngIf="isHandset$ | async">
-        <div class="col-grp-containr">
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="openDrawState()"
-            (click)="drawer.open()">
+          <button type="button" aria-label="Toggle sidenav" class="menu-btn" mat-icon-button (click)="changeDrawState(true)"
+            (click)="drawer.open()" *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon ">menu</mat-icon>
           </button>
-        </div>
+        </mat-toolbar>
       </div>
     </mat-toolbar>
   </mat-sidenav-content>

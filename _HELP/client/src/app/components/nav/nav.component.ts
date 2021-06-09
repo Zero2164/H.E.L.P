@@ -11,7 +11,8 @@ import { Navlinks } from './nav-links/navlinks';
 })
 export class NavComponent implements OnInit {
   checkDrawState: boolean;
-  chngDrawState: boolean;
+
+  // import navlink interface and structure navbar link data
   navLinks: Navlinks[] = [
     {
       title: 'About',
@@ -32,31 +33,26 @@ export class NavComponent implements OnInit {
   ];
 
 
-
+  // determine screen view breakpoint, change elements view depending on breakpoint
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
+  // import breakpointObserver property
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() { }
-
-  changeDrawState() {
-    this.checkDrawState = !this.checkDrawState;
-    if (this.checkDrawState) {
-      this.chngDrawState = true;
-    } else if (!this.checkDrawState) {
-      this.chngDrawState = false;
-    }
+  
+  // create checkDrawState() function to toggle between changeDrawState tru or false
+  changeDrawState(event?: boolean) {
+    if(event) {
+      this.checkDrawState = true;
+    } else if (!event) {
+      this.checkDrawState = false;
+    } 
   }
 
-  closeDrawState() {
-    this.chngDrawState = false;
-  }
 
-  openDrawState() {
-    this.chngDrawState = true;
-  }
 }

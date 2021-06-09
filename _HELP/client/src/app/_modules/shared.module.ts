@@ -12,7 +12,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [],
@@ -31,7 +33,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule
   ],
   exports: [
     MatRippleModule,
@@ -48,7 +53,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }

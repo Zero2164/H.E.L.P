@@ -15,6 +15,8 @@
     padding-bottom: 0.2rem;
 }
 
+
+/* Main Navbar classes */
 .nav {
     display: inline-flex;
     justify-content: flex-end;
@@ -47,6 +49,14 @@
     background: inherit;
 }
 
+.mat-drawer-content {
+    overflow-x: hidden;
+}
+
+
+
+
+/*  */
 .home-btn-div {
     height: 60%;
     width: 100%;
@@ -144,34 +154,7 @@
     transition: 0.1s;
 }
 
-.col-grp-containr {
-    transform: skew(0deg);
-    -webkit-transform: skew(10deg);
-    -moz-transform: skew(10deg);
-    -o-transform: skew(10deg);
-
-}
-
-.mat-drawer-content {
-    overflow-x: hidden;
-}
-
-
-
-.col-menu-containr {
-    position: absolute;
-    top: 0;
-    right: -10px;
-    height: 3.4rem;
-    width: 40%;
-    background-color: rgba(44, 48, 49, 0.788);
+.menu-btn {
     margin-left: auto;
-    padding-right: 2rem;
-    transition: 0.4s;
-    text-align: end;
-    color: #EEEEEE;
-    transform: skew(0deg);
-    -webkit-transform: skew(-10deg);
-    -moz-transform: skew(-10deg);
-    -o-transform: skew(-10deg);
+    margin-bottom: 0.2rem;
 }

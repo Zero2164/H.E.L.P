@@ -7,7 +7,7 @@
             <h2 class="center-elem">Backlog</h2>
             <mat-card class="drpList" cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo"
                 (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[inProgressList, doneList]">
-                <app-tasks (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task">
+                <app-tasks [disabled]="true" (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task">
                 </app-tasks>
             </mat-card>
         </div>
