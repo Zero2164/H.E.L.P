@@ -1,6 +1,8 @@
 import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { Task } from './tasks/tasks';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +10,7 @@ import { Task } from './tasks/tasks';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +45,17 @@ export class ProjectsComponent implements OnInit {
     );
   }
 
+  newTask() {
+    const dialogRef = this.dialog.open(TaskDialogComponent, {
+      width: '270px',
+      data: {
+        task: {}
+      }
+    });
+    dialogRef
+      .afterClosed()
+      .subscribe((result: TaskDialogResult) => this.todo.push(result.task));
+  }
 
 
 }

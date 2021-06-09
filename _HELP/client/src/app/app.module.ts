@@ -13,6 +13,7 @@ import { SharedModule } from './_modules/shared.module';
 import { TasksComponent } from './components/projects/tasks/tasks.component';
 import { NavLinksComponent } from './components/nav/nav-links/nav-links.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TaskDialogComponent } from './components/projects/task-dialog/task-dialog.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutComponent,
     TasksComponent,
     NavLinksComponent,
-    ContactComponent
+    ContactComponent,
+    TaskDialogComponent
   ],
   imports: [
     BrowserModule,

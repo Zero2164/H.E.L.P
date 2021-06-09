@@ -11,6 +11,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [],
@@ -28,8 +30,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DragDropModule,
     MatListModule,
     MatSidenavModule,
-    MatTooltipModule
-
+    MatTooltipModule,
+    MatDialogModule
   ],
   exports: [
     MatRippleModule,
@@ -45,7 +47,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DragDropModule,
     MatListModule,
     MatSidenavModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
