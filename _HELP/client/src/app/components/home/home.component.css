@@ -34,7 +34,7 @@
     text-align: center;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
     .sect-1 {
         display: grid;
         text-align: left;
@@ -52,6 +52,7 @@
     }
     #header-inner {
         margin-bottom: 1rem;
+        transform: scale(80%);
     }
     #sub-text {
         grid-area: subtext;
@@ -61,8 +62,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 2rem;
+
     }
     #sub-text-inner {
         transform: skew(10deg);
+        padding-left: 2rem;
+    }
+}
+
+
+/* animation settings */
+
+#header {
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: headr;
+}
+
+
+@keyframes headr {
+
+    100% {
+        opacity: 1;
+        margin-right: 10rem;
     }
 }
