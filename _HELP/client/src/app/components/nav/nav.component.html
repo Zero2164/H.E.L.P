@@ -12,7 +12,7 @@
       </mat-selection-list>
     </mat-nav-list>
     <div matRipple class="home-btn-div" title="Return to Home Page" routerLink="/" (click)="drawer.close()"
-      (click)="changeDrawState(false)">
+      (click)="changeDrawState(false)" (click)="setTitle('/')">
       <div class="home-div-unskew">
         <span class="home-txt">Home</span>
         <mat-icon class="home-btn">home</mat-icon>
@@ -26,11 +26,11 @@
       <div class="main-container">
         <mat-toolbar class="light-bg">
           <div class="icon-help-contain">
-            <mat-icon title="Portfolio Home Page" class="icon-flip" routerLink="/">dashboard</mat-icon>
+            <mat-icon title="Portfolio Home Page" class="icon-flip" (click)="setTitle('/')" routerLink="/">dashboard</mat-icon>
           </div>
           <ng-container *ngIf="!(isHandset$ | async)">
             <mat-selection-list class="nav" [multiple]="false">
-              <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
+              <app-nav-links [navlink]="navLink" (click)="setTitle(navLink.title)" *ngFor="let navLink of navLinks"></app-nav-links>
             </mat-selection-list>
           </ng-container>
           <button type="button" aria-label="Toggle sidenav" class="menu-btn" mat-icon-button

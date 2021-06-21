@@ -1,7 +1,8 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { NgSwitchCase } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, RouterLink, RouterLinkWithHref, RouterModule, RouterState } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Navlinks } from './nav-links/navlinks';
@@ -13,6 +14,7 @@ import { Navlinks } from './nav-links/navlinks';
 })
 export class NavComponent implements OnInit {
   checkDrawState: boolean;
+  tabTitle = window.location.pathname.toString().replace("/", "");
 
   // import navlink interface and structure navbar link data
   navLinks: Navlinks[] = [
@@ -41,22 +43,35 @@ export class NavComponent implements OnInit {
   // import breakpointObserver property
   constructor(private breakpointObserver: BreakpointObserver, private titleService: Title, private router: Router) { }
 
-  ngOnInit() { 
-    console.log(this.router)
+  ngOnInit() {
+    this.getTabTitle();
   }
-  
+
   // create checkDrawState() function to toggle between changeDrawState tru or false
   changeDrawState(event?: boolean) {
-    if(event) {
+    if (event) {
       this.checkDrawState = true;
     } else if (!event) {
       this.checkDrawState = false;
-    } 
+    }
+  }
+
+  getTabTitle() {
+    return this.setTitle(this.capitalise(this.tabTitle));
+  }
+
+  capitalise(str: string) {
+    const lower = str.toLowerCase();
+    return str.charAt(0).toUpperCase() + lower.slice(1)
   }
 
   // set browser tab title
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle("HELP | " + newTitle);
+  setTitle(newTitle: string) {
+    if (newTitle === "/" || newTitle === "") {
+      this.titleService.setTitle("Kyle Portfolio");
+    } else {
+      this.titleService.setTitle("Kyle Portfolio | " + newTitle);
+    }
   }
 
 
