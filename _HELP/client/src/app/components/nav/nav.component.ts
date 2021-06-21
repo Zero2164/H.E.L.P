@@ -1,5 +1,7 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Router, RouterLink, RouterLinkWithHref, RouterModule, RouterState } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Navlinks } from './nav-links/navlinks';
@@ -16,19 +18,15 @@ export class NavComponent implements OnInit {
   navLinks: Navlinks[] = [
     {
       title: 'About',
-      link: 'about'
+      link: 'about',
     },
     {
       title: 'Projects',
-      link: 'projects'
-    },
-    {
-      title: 'Resume',
-      link: 'resume'
+      link: 'projects',
     },
     {
       title: 'Contact',
-      link: 'contact'
+      link: 'contact',
     }
   ];
 
@@ -41,9 +39,11 @@ export class NavComponent implements OnInit {
     );
 
   // import breakpointObserver property
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private titleService: Title, private router: Router) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log(this.router)
+  }
   
   // create checkDrawState() function to toggle between changeDrawState tru or false
   changeDrawState(event?: boolean) {
@@ -52,6 +52,11 @@ export class NavComponent implements OnInit {
     } else if (!event) {
       this.checkDrawState = false;
     } 
+  }
+
+  // set browser tab title
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle("HELP | " + newTitle);
   }
 
 

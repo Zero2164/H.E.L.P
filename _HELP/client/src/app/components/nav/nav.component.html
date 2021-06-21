@@ -7,7 +7,7 @@
     </button>
     <mat-nav-list class="mini-nav">
       <mat-selection-list [multiple]="false">
-        <app-nav-links (click)="drawer.close()" (click)="changeDrawState(false)" [navlink]="navLink"
+        <app-nav-links (click)="drawer.close()" (click)="changeDrawState(false)" (click)="setTitle(navLink.title)" [navlink]="navLink"
           *ngFor="let navLink of navLinks"></app-nav-links>
       </mat-selection-list>
     </mat-nav-list>
@@ -19,25 +19,27 @@
         <mat-icon class="home-btn logo-btn">dashboard</mat-icon>
       </div>
     </div>
+    
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="light-bg">
       <div class="main-container">
         <mat-toolbar class="light-bg">
-          <button mat-icon-button title="Return to Home Page">
-            <mat-icon class="icon-flip" routerLink="/">dashboard</mat-icon>
-          </button>
+          <div class="icon-help-contain">
+            <mat-icon title="Portfolio Home Page" class="icon-flip" routerLink="/">dashboard</mat-icon>
+          </div>
           <ng-container *ngIf="!(isHandset$ | async)">
             <mat-selection-list class="nav" [multiple]="false">
               <app-nav-links [navlink]="navLink" *ngFor="let navLink of navLinks"></app-nav-links>
             </mat-selection-list>
           </ng-container>
-          <button type="button" aria-label="Toggle sidenav" class="menu-btn" mat-icon-button (click)="changeDrawState(true)"
-            (click)="drawer.open()" *ngIf="isHandset$ | async">
+          <button type="button" aria-label="Toggle sidenav" class="menu-btn" mat-icon-button
+            (click)="changeDrawState(true)" (click)="drawer.open()" *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon ">menu</mat-icon>
           </button>
         </mat-toolbar>
       </div>
     </mat-toolbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

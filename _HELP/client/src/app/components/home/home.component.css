@@ -63,29 +63,27 @@
         justify-content: center;
         align-items: center;
         margin-left: 2rem;
+        background-color: #EEEEEE;
 
     }
     #sub-text-inner {
         transform: skew(10deg);
         padding-left: 2rem;
     }
-}
-
-
-/* animation settings */
-
-#header {
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-name: headr;
-}
-
-
-@keyframes headr {
-
-    100% {
-        opacity: 1;
-        margin-right: 10rem;
+    /* home-component animation settings */
+    #header {
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-name: headr;
+        opacity: 0;
+        margin-left: 25rem;
+    }
+    @keyframes headr {
+        100% {
+            opacity: 1;
+            margin-left: 0rem;
+        }
     }
 }
+
