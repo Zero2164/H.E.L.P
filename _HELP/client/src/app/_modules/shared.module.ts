@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms'
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [],
@@ -36,7 +37,8 @@ import { FormsModule } from '@angular/forms'
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ScrollingModule
   ],
   exports: [
     MatRippleModule,
@@ -56,7 +58,8 @@ import { FormsModule } from '@angular/forms'
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ScrollingModule
   ]
 })
 export class SharedModule { }
